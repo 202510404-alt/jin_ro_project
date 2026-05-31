@@ -1,7 +1,18 @@
-# settings.py
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+# src/settings.py
+
+# 🖥️ 1. 내 모니터에 실제로 뜰 안전한 창 크기 (기기 화면 밖으로 안 삐져나감)
+SCREEN_WIDTH = 1024
+SCREEN_HEIGHT = 768
+
+# 🎮 2. 게임 내부에서 연산할 거대한 가상 크기 (이 숫자가 클수록 화면이 축소되어 캐릭터가 작아 보임!)
+# 가로 세로 비율을 실제 창 크기(4:3) 비율과 비슷하게 맞추면 화면이 찌그러지지 않고 예쁩니다.
+VIRTUAL_WIDTH = 1600
+VIRTUAL_HEIGHT = 1200
+
 FPS = 60
-GROUND_Y = 500
+
+# 🌟 땅바닥의 높이는 이제 뻥튀기 된 가상 화면 높이(1200) 기준으로 자동 조절됩니다.
+GROUND_Y = VIRTUAL_HEIGHT - 120
+
 SKY_BLUE = (135, 206, 235)
 GREEN = (34, 139, 34)

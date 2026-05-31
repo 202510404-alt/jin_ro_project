@@ -1,5 +1,5 @@
 # player/motions/ground_motions.py
-from player.motions.motion_base import MotionBase
+from src.player.motions.motion_base import MotionBase
 
 class GroundMotions(MotionBase):
     def handle_state(self, vars_obj):

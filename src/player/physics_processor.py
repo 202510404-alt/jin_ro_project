@@ -1,6 +1,6 @@
 # player/physics_processor.py
 import pygame
-from settings import SCREEN_WIDTH, GROUND_Y
+from src.settings import SCREEN_WIDTH, GROUND_Y
 
 class PlayerPhysicsProcessor:
     def process(self, vars_obj, platforms):

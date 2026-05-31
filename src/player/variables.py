@@ -1,5 +1,5 @@
 # src/player/variables.py
-from settings import GROUND_Y # 🌟 src. 제거하여 경로 에러 방지
+from settings import GROUND_Y
 
 class PlayerVariables:
     def __init__(self, x, y):
@@ -26,12 +26,19 @@ class PlayerVariables:
         self.attack_duration = 15       # 공격 모션 1회당 유지 시간
         self.has_hit_enemy = False      # 이번 공격 타수에서 적을 맞췄는가?
         
-        # ⏱️ [콤보 유효 타이머] 변수 모음집에서 집중 관리하도록 설계
-        # 60 FPS 기준 1.5초 = 90프레임 동안 다음 연타 입력을 기다립니다.
+        # ⏱️ 콤보 유효 타이머 (1.5초 = 90프레임)
         self.combo_expire_time = 90     
-        self.combo_timer = 0            # 실시간으로 줄어들 스케줄러 타이머
+        self.combo_timer = 0            
         
         # 📐 공격 범위(히트박스) 크기 설정
         self.attack_range_width = 80
         self.attack_range_height = 50
-        self.attack_rect = None         # 실시간 공격 범위 사각형 (pygame.Rect)
+        self.attack_rect = None         
+        
+        # 🎬 [애니메이션 핵심 제어 변수]
+        self.anim_timer = 0             # 프레임 카운터
+        self.anim_speed = 8             # 숫자가 낮을수록 애니메이션이 빨라짐 (8프레임마다 다음 장)
+        self.current_frame_idx = 0      # 리스트에서 현재 몇 번째 이미지를 그릴지 인덱스
+        
+        # 🚀 점프 선딜레이 타이머 (W 누른 순간 5프레임 동안만 READY_JUMP 유지)
+        self.ready_jump_timer = 0

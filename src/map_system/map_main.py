@@ -88,7 +88,7 @@ class GameMap:
 
     def draw(self, screen):
         """배경, 바닥 지형, 그리고 공중 플랫폼 지형들을 순서대로 화면에 렌더링합니다."""
-        # 1. 배경 하늘 출력 (화면에 꽉 차게 스케일)
+        # 1. 배경 하늘 출력 (1600x1200 화면에 꽉 차게 고정)
         scaled_bg = pygame.transform.scale(self.bg_image, (screen.get_width(), screen.get_height()))
         screen.blit(scaled_bg, (0, 0))
         
@@ -96,10 +96,14 @@ class GameMap:
         for platform in self.platforms:
             platform.draw(screen)
 
-        # 3. 흙바닥 지형 그리기 (화면 가로 폭만큼 타일링 배치)
-        ground_w = self.ground_image.get_width()
-        ground_h = self.ground_image.get_height()
+        # 3. 🧱 흙바닥 지형 그리기
+        import settings  # settings.py의 동적 GROUND_Y를 가져오기 위함
         
-        # 맵 전체 너비만큼 바닥 이미지를 이어 붙여서 출력
+        ground_w = self.ground_image.get_width()
+        
+        # 🌟 JSON의 낡은 값을 무시하고, settings.py에서 계산된 화면 비례 높이로 강제 동기화
+        self.vars.ground_y = settings.GROUND_Y
+        
+        # 맵의 총 가로 길이만큼 타일을 루프 돌며 이어 붙여서 출력
         for x_pos in range(0, self.vars.width, ground_w):
             screen.blit(self.ground_image, (x_pos, self.vars.ground_y))

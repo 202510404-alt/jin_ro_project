@@ -1,6 +1,6 @@
 # map_system/variables.py
 import math
-from map_system.map_settings import *
+from src.map_system.map_settings import *
 
 class MapVariables:
     def __init__(self, map_id=1, width=DEFAULT_MAP_WIDTH, height=DEFAULT_MAP_HEIGHT):
