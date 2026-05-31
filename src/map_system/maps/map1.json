@@ -1,0 +1,14 @@
+{
+    "map_id": 1,
+    "map_width": 1600,
+    "map_height": 600,
+    "background_type": "bg_sky",
+    "ground_type": "ground_dirt",
+    "ground_y": 536,
+    "platforms": [
+        { "x": 200, "y": 400, "width": 150, "height": 30, "is_solid": true, "is_visible": true, "passable_from_bottom": false },
+        { "x": 450, "y": 300, "width": 200, "height": 30, "is_solid": true, "is_visible": true, "passable_from_bottom": false },
+        { "x": 700, "y": 200, "width": 150, "height": 30, "is_solid": true, "is_visible": true, "passable_from_bottom": false }
+    ],
+    "traps": []
+}
