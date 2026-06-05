@@ -40,13 +40,13 @@ def get_best_python():
 TARGET_PYTHON = get_best_python()
 WATCHER_SCRIPT = CLINE_TOOLS_DIR / "jjap_watcher.py"
 NAVIGATOR_SCRIPT = CLINE_TOOLS_DIR / "agent_navigator.py"
+CREATE_AI_MAP_SCRIPT = CLINE_TOOLS_DIR / "create_ai_map.py" # 🔥 신설 경로 등록
 
 
 def auto_install_dependencies():
     """형님이 가상환경을 안 켰을 때를 대비해, watchdog이 없으면 자동으로 설치해주는 안전장치"""
     print("📦 [의존성 검사] 실시간 감시망 필수 라이브러리(watchdog) 상태 점검 중...")
     try:
-        # 지정된 파이썬 환경에 watchdog이 깔려있는지 체크
         subprocess.run(
             [TARGET_PYTHON, "-c", "import watchdog"],
             check=True,
@@ -78,6 +78,34 @@ def main():
     auto_install_dependencies()
     print("----------------------------------------------------------------------")
 
+    # 환경변수 세팅 복사 및 조립 (import 크래시 방지 및 실시간 무버퍼 강제)
+    env = os.environ.copy()
+    env["PYTHONPATH"] = os.path.pathsep.join([str(ROOT_DIR), str(CLINE_TOOLS_DIR), env.get("PYTHONPATH", "")])
+    env["PYTHONUNBUFFERED"] = "1"
+
+    # 🔥 [형님의 특명 선제 공격 수술 부위]
+    # 사령탑이 가동되자마자 에이전트용 초경량 지도를 선제 생산하여 빈틈을 없앱니다.
+    print("➡️ 0단계: 기동 전 AI 초경량 요약 지도(AI_CODEBASE_MAP.md) 선제 강제 빌드...")
+    if CREATE_AI_MAP_SCRIPT.exists():
+        try:
+            # 먼저 인덱서 장부(.jjap_symbols.json)가 있어야 하므로 인덱서를 선제 실행해 줍니다.
+            indexer_script = CLINE_TOOLS_DIR / "indexer.py"
+            if indexer_script.exists():
+                subprocess.run([TARGET_PYTHON, "-c", "from indexer import AdvancedIndexerV2; from pathlib import Path; AdvancedIndexerV2(Path('.')).scan_project()"], cwd=str(ROOT_DIR), env=env, check=True, stdout=subprocess.DEVNULL)
+            
+            # 이후 AI 맵 최종 가공 생산
+            subprocess.run(
+                [TARGET_PYTHON, str(CREATE_AI_MAP_SCRIPT)],
+                cwd=str(ROOT_DIR),
+                env=env,
+                check=True
+            )
+        except Exception as e:
+            print(f"⚠️ [경고] 초도 AI 맵 생산 중 경미한 지연 또는 예외 발생 (워처 가동 시 자동 회복 예정): {e}")
+    else:
+        print(f"⚠️ [경고] {CREATE_AI_MAP_SCRIPT.name} 스크립트를 찾을 수 없어 0단계를 건너뜁니다.")
+    print("----------------------------------------------------------------------")
+
     # 📡 1단계: 실시간 백그라운드 워처(jjap_watcher.py) 가동 및 출력 사포 인양
     print("➡️ 1단계: 실시간 백그라운드 자동 감시망(Watcher) 투입 중...")
     
@@ -85,13 +113,7 @@ def main():
         print(f"❌ [경로 에러] 워처 스크립트가 지정된 궤도에 존재하지 않습니다: {WATCHER_SCRIPT}")
         return
 
-    # 환경변수에 프로젝트 루트 및 cline_tools 삽입하여 import 크래시 영구 봉쇄
-    env = os.environ.copy()
-    env["PYTHONPATH"] = os.path.pathsep.join([str(ROOT_DIR), str(CLINE_TOOLS_DIR), env.get("PYTHONPATH", "")])
-    # 💡 실시간 무버퍼링 출력 강제화 스위치 탑재 (파이썬 로그가 메모리에 갇히는 현상 원천 차단)
-    env["PYTHONUNBUFFERED"] = "1"
-
-    # ⭐ [핵심 수술 부위] stdout과 stderr를 현재 형님이 보고 계신 터미널 화면(sys.stdout/err)으로 다이렉트 바느질!!
+    # stdout과 stderr를 부모 터미널 화면으로 다이렉트 바느질
     watcher_process = subprocess.Popen(
         [TARGET_PYTHON, str(WATCHER_SCRIPT)],
         cwd=str(ROOT_DIR),
@@ -103,7 +125,6 @@ def main():
     
     time.sleep(1.0) # 워처 안착용 시동 대기 타임 보정
     
-    # 워처가 시작하자마자 구문 오류나 모듈 로딩 오류로 즉사했는지 체크하는 안전핀
     if watcher_process.poll() is not None:
         print(f"❌ [기동 즉사] 감시망 프로세스가 실행 즉시 사망했습니다. (리턴코드: {watcher_process.poll()})")
         print("💡 상단에 출력된 파이썬 문법/모듈 에러 내역을 추적하십시오.")
@@ -122,7 +143,6 @@ def main():
     print("----------------------------------------------------------------------")
     
     try:
-        # GUI 프로세스도 동일하게 환경변수 및 터미널 출력 완벽 동기화
         subprocess.run(
             [TARGET_PYTHON, str(NAVIGATOR_SCRIPT)],
             cwd=str(ROOT_DIR),
