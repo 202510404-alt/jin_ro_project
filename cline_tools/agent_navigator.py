@@ -122,6 +122,7 @@ class JjapCursorNavigatorUI:
         self.code_display.configure(xscrollcommand=x_scroll.set, yscrollcommand=y_scroll.set)
         
         self.code_display.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        # 🩹 [수술 완료]: 오타 났던 부분을 순정 틱인터 규격인 side=tk.BOTTOM으로 완벽 수리했습니다!
         x_scroll.pack(side=tk.BOTTOM, fill=tk.X)
         y_scroll.pack(side=tk.RIGHT, fill=tk.Y)
         
@@ -159,12 +160,24 @@ class JjapCursorNavigatorUI:
             self.status_label.config(text=" ❌ 프로토콜 규격 불일치 - 가이드 팝업 호출됨.")
             return
 
-        # 결과 조각들을 스트림 형식으로 이어서 출력
+        # ⚙️ 최적화 포인트: 전체 스트림 맨 위에 '단 한 번만' 황금 밸런스 마스터 가이드라인 주입
+        master_global_header = (
+            f"# ==========================================================================\n"
+            f"# 🎯 [AI 전역 가이드라인: 무결성과 확장성의 황금 밸런스 규칙]\n"
+            f"# 아래 제공된 모든 코드 조각을 수정 및 구현할 때 준수해야 할 최적화 규칙입니다.\n"
+            f"#\n"
+            f"# 1. 구조 유지: 기존 클래스/함수명 명세 및 'self.vars' 데이터 프로토콜은 엄격히 준수하십시오.\n"
+            f"# 2. 환각 방지: 존재하지 않는 가짜 함수 창조 절대 금지! 절대값/거리 연산은 순정 'abs()'를 쓰십시오.\n"
+            f"# 3. 개발 자유: 위 최소 조건 내에서 알고리즘, 물리 수식, 이동 로직은 자유롭고 창의적으로 짜십시오.\n"
+            f"# ==========================================================================\n\n"
+        )
+        self.code_display.insert(tk.END, master_global_header)
+
+        # ⚙️ 개별 코드 조각들은 중복 주석 없이 깔끔한 Target 헤더만 인쇄
         for slc in extracted_slices:
             stream_header = (
-                f"# ==========================================================\n"
-                f"# [요청 {slc['req_num']}] TARGET: {slc['file']} ({slc['line_range']}라인)\n"
-                f"# ==========================================================\n"
+                f"# 📄 [요청 {slc['req_num']}] TARGET: {slc['file']} ({slc['line_range']}라인)\n"
+                f"# ----------------------------------------------------------\n"
             )
             self.code_display.insert(tk.END, stream_header)
             self.code_display.insert(tk.END, slc["code"])
