@@ -1,0 +1,1197 @@
+{
+  "symbols": [
+    {
+      "symbol_id": "src/main.py::main",
+      "full_name": "main",
+      "name": "main",
+      "type": "function",
+      "parent": null,
+      "file": "src/main.py",
+      "start_line": 19,
+      "end_line": 78,
+      "range": [
+        19,
+        78
+      ],
+      "decorators": [],
+      "signature": "def main(...)",
+      "calls": [
+        "Clock",
+        "DummyEnemy",
+        "GameMap",
+        "Player",
+        "Surface",
+        "blit",
+        "draw",
+        "exit",
+        "fill",
+        "flip",
+        "get",
+        "init",
+        "quit",
+        "set_caption",
+        "set_mode",
+        "smoothscale",
+        "tick",
+        "update"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/enemy/dummy/dummy_main.py::DummyEnemy",
+      "full_name": "DummyEnemy",
+      "name": "DummyEnemy",
+      "type": "class",
+      "parent": null,
+      "file": "src/enemy/dummy/dummy_main.py",
+      "start_line": 7,
+      "end_line": 80,
+      "range": [
+        7,
+        80
+      ],
+      "decorators": [],
+      "signature": "class DummyEnemy",
+      "calls": [],
+      "used_by": [
+        "src/main.py::main"
+      ]
+    },
+    {
+      "symbol_id": "src/enemy/dummy/dummy_main.py::DummyEnemy.__init__",
+      "full_name": "DummyEnemy.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "DummyEnemy",
+      "file": "src/enemy/dummy/dummy_main.py",
+      "start_line": 8,
+      "end_line": 10,
+      "range": [
+        8,
+        10
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [
+        "DummyVariables",
+        "load_images"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/enemy/dummy/dummy_main.py::DummyEnemy.load_images",
+      "full_name": "DummyEnemy.load_images",
+      "name": "load_images",
+      "type": "method",
+      "parent": "DummyEnemy",
+      "file": "src/enemy/dummy/dummy_main.py",
+      "start_line": 12,
+      "end_line": 32,
+      "range": [
+        12,
+        32
+      ],
+      "decorators": [],
+      "signature": "def load_images(...)",
+      "calls": [
+        "abspath",
+        "convert_alpha",
+        "dirname",
+        "exit",
+        "join",
+        "load",
+        "print",
+        "quit",
+        "scale"
+      ],
+      "used_by": [
+        "src/enemy/dummy/dummy_main.py::DummyEnemy.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/enemy/dummy/dummy_main.py::DummyEnemy.check_player_attack",
+      "full_name": "DummyEnemy.check_player_attack",
+      "name": "check_player_attack",
+      "type": "method",
+      "parent": "DummyEnemy",
+      "file": "src/enemy/dummy/dummy_main.py",
+      "start_line": 34,
+      "end_line": 49,
+      "range": [
+        34,
+        49
+      ],
+      "decorators": [],
+      "signature": "def check_player_attack(...)",
+      "calls": [
+        "Rect",
+        "colliderect",
+        "print"
+      ],
+      "used_by": [
+        "src/enemy/dummy/dummy_main.py::DummyEnemy.update"
+      ]
+    },
+    {
+      "symbol_id": "src/enemy/dummy/dummy_main.py::DummyEnemy.update",
+      "full_name": "DummyEnemy.update",
+      "name": "update",
+      "type": "method",
+      "parent": "DummyEnemy",
+      "file": "src/enemy/dummy/dummy_main.py",
+      "start_line": 51,
+      "end_line": 60,
+      "range": [
+        51,
+        60
+      ],
+      "decorators": [],
+      "signature": "def update(...)",
+      "calls": [
+        "check_player_attack"
+      ],
+      "used_by": [
+        "src/main.py::main",
+        "src/map_system/map_main.py::GameMap.update",
+        "src/player/player_main.py::Player.update"
+      ]
+    },
+    {
+      "symbol_id": "src/enemy/dummy/dummy_main.py::DummyEnemy.draw",
+      "full_name": "DummyEnemy.draw",
+      "name": "draw",
+      "type": "method",
+      "parent": "DummyEnemy",
+      "file": "src/enemy/dummy/dummy_main.py",
+      "start_line": 62,
+      "end_line": 80,
+      "range": [
+        62,
+        80
+      ],
+      "decorators": [],
+      "signature": "def draw(...)",
+      "calls": [
+        "blit",
+        "int",
+        "max",
+        "rect"
+      ],
+      "used_by": [
+        "src/main.py::main",
+        "src/map_system/map_main.py::GameMap.draw"
+      ]
+    },
+    {
+      "symbol_id": "src/enemy/dummy/variables.py::DummyVariables",
+      "full_name": "DummyVariables",
+      "name": "DummyVariables",
+      "type": "class",
+      "parent": null,
+      "file": "src/enemy/dummy/variables.py",
+      "start_line": 4,
+      "end_line": 23,
+      "range": [
+        4,
+        23
+      ],
+      "decorators": [],
+      "signature": "class DummyVariables",
+      "calls": [],
+      "used_by": [
+        "src/enemy/dummy/dummy_main.py::DummyEnemy.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/enemy/dummy/variables.py::DummyVariables.__init__",
+      "full_name": "DummyVariables.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "DummyVariables",
+      "file": "src/enemy/dummy/variables.py",
+      "start_line": 5,
+      "end_line": 23,
+      "range": [
+        5,
+        23
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/map_system/map_main.py::GameMap",
+      "full_name": "GameMap",
+      "name": "GameMap",
+      "type": "class",
+      "parent": null,
+      "file": "src/map_system/map_main.py",
+      "start_line": 9,
+      "end_line": 109,
+      "range": [
+        9,
+        109
+      ],
+      "decorators": [],
+      "signature": "class GameMap",
+      "calls": [],
+      "used_by": [
+        "src/main.py::main"
+      ]
+    },
+    {
+      "symbol_id": "src/map_system/map_main.py::GameMap.__init__",
+      "full_name": "GameMap.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "GameMap",
+      "file": "src/map_system/map_main.py",
+      "start_line": 10,
+      "end_line": 21,
+      "range": [
+        10,
+        21
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [
+        "build_map",
+        "load_map_assets",
+        "load_map_from_json"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/map_system/map_main.py::GameMap.load_map_from_json",
+      "full_name": "GameMap.load_map_from_json",
+      "name": "load_map_from_json",
+      "type": "method",
+      "parent": "GameMap",
+      "file": "src/map_system/map_main.py",
+      "start_line": 23,
+      "end_line": 54,
+      "range": [
+        23,
+        54
+      ],
+      "decorators": [],
+      "signature": "def load_map_from_json(...)",
+      "calls": [
+        "MapVariables",
+        "abspath",
+        "dirname",
+        "exit",
+        "join",
+        "load",
+        "open",
+        "print",
+        "quit"
+      ],
+      "used_by": [
+        "src/map_system/map_main.py::GameMap.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/map_system/map_main.py::GameMap.load_map_assets",
+      "full_name": "GameMap.load_map_assets",
+      "name": "load_map_assets",
+      "type": "method",
+      "parent": "GameMap",
+      "file": "src/map_system/map_main.py",
+      "start_line": 56,
+      "end_line": 69,
+      "range": [
+        56,
+        69
+      ],
+      "decorators": [],
+      "signature": "def load_map_assets(...)",
+      "calls": [
+        "abspath",
+        "convert_alpha",
+        "dirname",
+        "exit",
+        "join",
+        "load",
+        "print",
+        "quit"
+      ],
+      "used_by": [
+        "src/map_system/map_main.py::GameMap.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/map_system/map_main.py::GameMap.build_map",
+      "full_name": "GameMap.build_map",
+      "name": "build_map",
+      "type": "method",
+      "parent": "GameMap",
+      "file": "src/map_system/map_main.py",
+      "start_line": 71,
+      "end_line": 82,
+      "range": [
+        71,
+        82
+      ],
+      "decorators": [],
+      "signature": "def build_map(...)",
+      "calls": [
+        "Platform",
+        "append",
+        "get"
+      ],
+      "used_by": [
+        "src/map_system/map_main.py::GameMap.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/map_system/map_main.py::GameMap.update",
+      "full_name": "GameMap.update",
+      "name": "update",
+      "type": "method",
+      "parent": "GameMap",
+      "file": "src/map_system/map_main.py",
+      "start_line": 84,
+      "end_line": 87,
+      "range": [
+        84,
+        87
+      ],
+      "decorators": [],
+      "signature": "def update(...)",
+      "calls": [
+        "update"
+      ],
+      "used_by": [
+        "src/main.py::main",
+        "src/player/player_main.py::Player.update"
+      ]
+    },
+    {
+      "symbol_id": "src/map_system/map_main.py::GameMap.draw",
+      "full_name": "GameMap.draw",
+      "name": "draw",
+      "type": "method",
+      "parent": "GameMap",
+      "file": "src/map_system/map_main.py",
+      "start_line": 89,
+      "end_line": 109,
+      "range": [
+        89,
+        109
+      ],
+      "decorators": [],
+      "signature": "def draw(...)",
+      "calls": [
+        "blit",
+        "draw",
+        "get_height",
+        "get_width",
+        "range",
+        "scale"
+      ],
+      "used_by": [
+        "src/main.py::main"
+      ]
+    },
+    {
+      "symbol_id": "src/map_system/variables.py::MapVariables",
+      "full_name": "MapVariables",
+      "name": "MapVariables",
+      "type": "class",
+      "parent": null,
+      "file": "src/map_system/variables.py",
+      "start_line": 5,
+      "end_line": 32,
+      "range": [
+        5,
+        32
+      ],
+      "decorators": [],
+      "signature": "class MapVariables",
+      "calls": [],
+      "used_by": [
+        "src/map_system/map_main.py::GameMap.load_map_from_json"
+      ]
+    },
+    {
+      "symbol_id": "src/map_system/variables.py::MapVariables.__init__",
+      "full_name": "MapVariables.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "MapVariables",
+      "file": "src/map_system/variables.py",
+      "start_line": 6,
+      "end_line": 32,
+      "range": [
+        6,
+        32
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [
+        "ceil"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/platform_system/platform_main.py::Platform",
+      "full_name": "Platform",
+      "name": "Platform",
+      "type": "class",
+      "parent": null,
+      "file": "src/platform_system/platform_main.py",
+      "start_line": 7,
+      "end_line": 32,
+      "range": [
+        7,
+        32
+      ],
+      "decorators": [],
+      "signature": "class Platform",
+      "calls": [],
+      "used_by": [
+        "src/map_system/map_main.py::GameMap.build_map"
+      ]
+    },
+    {
+      "symbol_id": "src/platform_system/platform_main.py::Platform.__init__",
+      "full_name": "Platform.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "Platform",
+      "file": "src/platform_system/platform_main.py",
+      "start_line": 8,
+      "end_line": 10,
+      "range": [
+        8,
+        10
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [
+        "PlatformVariables",
+        "load_image"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/platform_system/platform_main.py::Platform.load_image",
+      "full_name": "Platform.load_image",
+      "name": "load_image",
+      "type": "method",
+      "parent": "Platform",
+      "file": "src/platform_system/platform_main.py",
+      "start_line": 12,
+      "end_line": 24,
+      "range": [
+        12,
+        24
+      ],
+      "decorators": [],
+      "signature": "def load_image(...)",
+      "calls": [
+        "abspath",
+        "convert_alpha",
+        "dirname",
+        "exit",
+        "join",
+        "load",
+        "print",
+        "quit",
+        "scale"
+      ],
+      "used_by": [
+        "src/platform_system/platform_main.py::Platform.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/platform_system/platform_main.py::Platform.update",
+      "full_name": "Platform.update",
+      "name": "update",
+      "type": "method",
+      "parent": "Platform",
+      "file": "src/platform_system/platform_main.py",
+      "start_line": 26,
+      "end_line": 27,
+      "range": [
+        26,
+        27
+      ],
+      "decorators": [],
+      "signature": "def update(...)",
+      "calls": [],
+      "used_by": [
+        "src/main.py::main",
+        "src/map_system/map_main.py::GameMap.update",
+        "src/player/player_main.py::Player.update"
+      ]
+    },
+    {
+      "symbol_id": "src/platform_system/platform_main.py::Platform.draw",
+      "full_name": "Platform.draw",
+      "name": "draw",
+      "type": "method",
+      "parent": "Platform",
+      "file": "src/platform_system/platform_main.py",
+      "start_line": 29,
+      "end_line": 32,
+      "range": [
+        29,
+        32
+      ],
+      "decorators": [],
+      "signature": "def draw(...)",
+      "calls": [
+        "blit"
+      ],
+      "used_by": [
+        "src/main.py::main",
+        "src/map_system/map_main.py::GameMap.draw"
+      ]
+    },
+    {
+      "symbol_id": "src/platform_system/variables.py::PlatformVariables",
+      "full_name": "PlatformVariables",
+      "name": "PlatformVariables",
+      "type": "class",
+      "parent": null,
+      "file": "src/platform_system/variables.py",
+      "start_line": 4,
+      "end_line": 33,
+      "range": [
+        4,
+        33
+      ],
+      "decorators": [],
+      "signature": "class PlatformVariables",
+      "calls": [],
+      "used_by": [
+        "src/platform_system/platform_main.py::Platform.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/platform_system/variables.py::PlatformVariables.__init__",
+      "full_name": "PlatformVariables.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "PlatformVariables",
+      "file": "src/platform_system/variables.py",
+      "start_line": 5,
+      "end_line": 33,
+      "range": [
+        5,
+        33
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/player/asset_loader.py::PlayerAssetLoader",
+      "full_name": "PlayerAssetLoader",
+      "name": "PlayerAssetLoader",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/asset_loader.py",
+      "start_line": 6,
+      "end_line": 70,
+      "range": [
+        6,
+        70
+      ],
+      "decorators": [],
+      "signature": "class PlayerAssetLoader",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/asset_loader.py::PlayerAssetLoader.__init__",
+      "full_name": "PlayerAssetLoader.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "PlayerAssetLoader",
+      "file": "src/player/asset_loader.py",
+      "start_line": 7,
+      "end_line": 10,
+      "range": [
+        7,
+        10
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [
+        "load_all_assets"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/player/asset_loader.py::PlayerAssetLoader.load_all_assets",
+      "full_name": "PlayerAssetLoader.load_all_assets",
+      "name": "load_all_assets",
+      "type": "method",
+      "parent": "PlayerAssetLoader",
+      "file": "src/player/asset_loader.py",
+      "start_line": 12,
+      "end_line": 60,
+      "range": [
+        12,
+        60
+      ],
+      "decorators": [],
+      "signature": "def load_all_assets(...)",
+      "calls": [
+        "_load_series",
+        "abspath",
+        "convert_alpha",
+        "dirname",
+        "exit",
+        "join",
+        "load",
+        "print",
+        "quit",
+        "scale"
+      ],
+      "used_by": [
+        "src/player/asset_loader.py::PlayerAssetLoader.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/asset_loader.py::PlayerAssetLoader._load_series",
+      "full_name": "PlayerAssetLoader._load_series",
+      "name": "_load_series",
+      "type": "method",
+      "parent": "PlayerAssetLoader",
+      "file": "src/player/asset_loader.py",
+      "start_line": 62,
+      "end_line": 70,
+      "range": [
+        62,
+        70
+      ],
+      "decorators": [],
+      "signature": "def _load_series(...)",
+      "calls": [
+        "append",
+        "convert_alpha",
+        "join",
+        "load",
+        "scale"
+      ],
+      "used_by": [
+        "src/player/asset_loader.py::PlayerAssetLoader.load_all_assets"
+      ]
+    },
+    {
+      "symbol_id": "src/player/combat_processor.py::PlayerCombatProcessor",
+      "full_name": "PlayerCombatProcessor",
+      "name": "PlayerCombatProcessor",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/combat_processor.py",
+      "start_line": 4,
+      "end_line": 31,
+      "range": [
+        4,
+        31
+      ],
+      "decorators": [],
+      "signature": "class PlayerCombatProcessor",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/combat_processor.py::PlayerCombatProcessor.process",
+      "full_name": "PlayerCombatProcessor.process",
+      "name": "process",
+      "type": "method",
+      "parent": "PlayerCombatProcessor",
+      "file": "src/player/combat_processor.py",
+      "start_line": 5,
+      "end_line": 31,
+      "range": [
+        5,
+        31
+      ],
+      "decorators": [],
+      "signature": "def process(...)",
+      "calls": [
+        "Rect"
+      ],
+      "used_by": [
+        "src/player/player_main.py::Player.update"
+      ]
+    },
+    {
+      "symbol_id": "src/player/input_handler.py::PlayerInputHandler",
+      "full_name": "PlayerInputHandler",
+      "name": "PlayerInputHandler",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/input_handler.py",
+      "start_line": 4,
+      "end_line": 66,
+      "range": [
+        4,
+        66
+      ],
+      "decorators": [],
+      "signature": "class PlayerInputHandler",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/input_handler.py::PlayerInputHandler.__init__",
+      "full_name": "PlayerInputHandler.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "PlayerInputHandler",
+      "file": "src/player/input_handler.py",
+      "start_line": 5,
+      "end_line": 6,
+      "range": [
+        5,
+        6
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/player/input_handler.py::PlayerInputHandler.update",
+      "full_name": "PlayerInputHandler.update",
+      "name": "update",
+      "type": "method",
+      "parent": "PlayerInputHandler",
+      "file": "src/player/input_handler.py",
+      "start_line": 8,
+      "end_line": 48,
+      "range": [
+        8,
+        48
+      ],
+      "decorators": [],
+      "signature": "def update(...)",
+      "calls": [
+        "get_pressed",
+        "trigger_attack"
+      ],
+      "used_by": [
+        "src/main.py::main",
+        "src/map_system/map_main.py::GameMap.update",
+        "src/player/player_main.py::Player.update"
+      ]
+    },
+    {
+      "symbol_id": "src/player/input_handler.py::PlayerInputHandler.trigger_attack",
+      "full_name": "PlayerInputHandler.trigger_attack",
+      "name": "trigger_attack",
+      "type": "method",
+      "parent": "PlayerInputHandler",
+      "file": "src/player/input_handler.py",
+      "start_line": 50,
+      "end_line": 66,
+      "range": [
+        50,
+        66
+      ],
+      "decorators": [],
+      "signature": "def trigger_attack(...)",
+      "calls": [],
+      "used_by": [
+        "src/player/input_handler.py::PlayerInputHandler.update"
+      ]
+    },
+    {
+      "symbol_id": "src/player/physics_processor.py::PlayerPhysicsProcessor",
+      "full_name": "PlayerPhysicsProcessor",
+      "name": "PlayerPhysicsProcessor",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/physics_processor.py",
+      "start_line": 5,
+      "end_line": 39,
+      "range": [
+        5,
+        39
+      ],
+      "decorators": [],
+      "signature": "class PlayerPhysicsProcessor",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/physics_processor.py::PlayerPhysicsProcessor.process",
+      "full_name": "PlayerPhysicsProcessor.process",
+      "name": "process",
+      "type": "method",
+      "parent": "PlayerPhysicsProcessor",
+      "file": "src/player/physics_processor.py",
+      "start_line": 6,
+      "end_line": 39,
+      "range": [
+        6,
+        39
+      ],
+      "decorators": [],
+      "signature": "def process(...)",
+      "calls": [
+        "Rect",
+        "colliderect"
+      ],
+      "used_by": [
+        "src/player/player_main.py::Player.update"
+      ]
+    },
+    {
+      "symbol_id": "src/player/player_main.py::Player",
+      "full_name": "Player",
+      "name": "Player",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/player_main.py",
+      "start_line": 12,
+      "end_line": 124,
+      "range": [
+        12,
+        124
+      ],
+      "decorators": [],
+      "signature": "class Player",
+      "calls": [],
+      "used_by": [
+        "src/main.py::main"
+      ]
+    },
+    {
+      "symbol_id": "src/player/player_main.py::Player.__init__",
+      "full_name": "Player.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "Player",
+      "file": "src/player/player_main.py",
+      "start_line": 13,
+      "end_line": 26,
+      "range": [
+        13,
+        26
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [
+        "AirMotions",
+        "AttackMotions",
+        "GroundMotions",
+        "PlayerAssetLoader",
+        "PlayerCombatProcessor",
+        "PlayerInputHandler",
+        "PlayerPhysicsProcessor",
+        "PlayerVariables"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/player/player_main.py::Player.update_animation_state",
+      "full_name": "Player.update_animation_state",
+      "name": "update_animation_state",
+      "type": "method",
+      "parent": "Player",
+      "file": "src/player/player_main.py",
+      "start_line": 28,
+      "end_line": 51,
+      "range": [
+        28,
+        51
+      ],
+      "decorators": [],
+      "signature": "def update_animation_state(...)",
+      "calls": [
+        "handle_state",
+        "hasattr"
+      ],
+      "used_by": [
+        "src/player/player_main.py::Player.update"
+      ]
+    },
+    {
+      "symbol_id": "src/player/player_main.py::Player.update",
+      "full_name": "Player.update",
+      "name": "update",
+      "type": "method",
+      "parent": "Player",
+      "file": "src/player/player_main.py",
+      "start_line": 53,
+      "end_line": 92,
+      "range": [
+        53,
+        92
+      ],
+      "decorators": [],
+      "signature": "def update(...)",
+      "calls": [
+        "get",
+        "hasattr",
+        "len",
+        "process",
+        "update",
+        "update_animation_state"
+      ],
+      "used_by": [
+        "src/main.py::main",
+        "src/map_system/map_main.py::GameMap.update"
+      ]
+    },
+    {
+      "symbol_id": "src/player/player_main.py::Player.draw",
+      "full_name": "Player.draw",
+      "name": "draw",
+      "type": "method",
+      "parent": "Player",
+      "file": "src/player/player_main.py",
+      "start_line": 94,
+      "end_line": 124,
+      "range": [
+        94,
+        124
+      ],
+      "decorators": [],
+      "signature": "def draw(...)",
+      "calls": [
+        "blit",
+        "flip",
+        "get",
+        "len",
+        "min"
+      ],
+      "used_by": [
+        "src/main.py::main",
+        "src/map_system/map_main.py::GameMap.draw"
+      ]
+    },
+    {
+      "symbol_id": "src/player/variables.py::PlayerVariables",
+      "full_name": "PlayerVariables",
+      "name": "PlayerVariables",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/variables.py",
+      "start_line": 4,
+      "end_line": 44,
+      "range": [
+        4,
+        44
+      ],
+      "decorators": [],
+      "signature": "class PlayerVariables",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/variables.py::PlayerVariables.__init__",
+      "full_name": "PlayerVariables.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "PlayerVariables",
+      "file": "src/player/variables.py",
+      "start_line": 5,
+      "end_line": 44,
+      "range": [
+        5,
+        44
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/player/motions/air_motions.py::AirMotions",
+      "full_name": "AirMotions",
+      "name": "AirMotions",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/motions/air_motions.py",
+      "start_line": 4,
+      "end_line": 12,
+      "range": [
+        4,
+        12
+      ],
+      "decorators": [],
+      "signature": "class AirMotions",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/motions/air_motions.py::AirMotions.handle_state",
+      "full_name": "AirMotions.handle_state",
+      "name": "handle_state",
+      "type": "method",
+      "parent": "AirMotions",
+      "file": "src/player/motions/air_motions.py",
+      "start_line": 5,
+      "end_line": 12,
+      "range": [
+        5,
+        12
+      ],
+      "decorators": [],
+      "signature": "def handle_state(...)",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.update_animation_state"
+      ]
+    },
+    {
+      "symbol_id": "src/player/motions/attack_motions.py::AttackMotions",
+      "full_name": "AttackMotions",
+      "name": "AttackMotions",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/motions/attack_motions.py",
+      "start_line": 4,
+      "end_line": 14,
+      "range": [
+        4,
+        14
+      ],
+      "decorators": [],
+      "signature": "class AttackMotions",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/motions/attack_motions.py::AttackMotions.handle_state",
+      "full_name": "AttackMotions.handle_state",
+      "name": "handle_state",
+      "type": "method",
+      "parent": "AttackMotions",
+      "file": "src/player/motions/attack_motions.py",
+      "start_line": 5,
+      "end_line": 14,
+      "range": [
+        5,
+        14
+      ],
+      "decorators": [],
+      "signature": "def handle_state(...)",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.update_animation_state"
+      ]
+    },
+    {
+      "symbol_id": "src/player/motions/ground_motions.py::GroundMotions",
+      "full_name": "GroundMotions",
+      "name": "GroundMotions",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/motions/ground_motions.py",
+      "start_line": 4,
+      "end_line": 13,
+      "range": [
+        4,
+        13
+      ],
+      "decorators": [],
+      "signature": "class GroundMotions",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.__init__"
+      ]
+    },
+    {
+      "symbol_id": "src/player/motions/ground_motions.py::GroundMotions.handle_state",
+      "full_name": "GroundMotions.handle_state",
+      "name": "handle_state",
+      "type": "method",
+      "parent": "GroundMotions",
+      "file": "src/player/motions/ground_motions.py",
+      "start_line": 5,
+      "end_line": 13,
+      "range": [
+        5,
+        13
+      ],
+      "decorators": [],
+      "signature": "def handle_state(...)",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.update_animation_state"
+      ]
+    },
+    {
+      "symbol_id": "src/player/motions/motion_base.py::MotionBase",
+      "full_name": "MotionBase",
+      "name": "MotionBase",
+      "type": "class",
+      "parent": null,
+      "file": "src/player/motions/motion_base.py",
+      "start_line": 2,
+      "end_line": 8,
+      "range": [
+        2,
+        8
+      ],
+      "decorators": [],
+      "signature": "class MotionBase",
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/player/motions/motion_base.py::MotionBase.__init__",
+      "full_name": "MotionBase.__init__",
+      "name": "__init__",
+      "type": "method",
+      "parent": "MotionBase",
+      "file": "src/player/motions/motion_base.py",
+      "start_line": 3,
+      "end_line": 4,
+      "range": [
+        3,
+        4
+      ],
+      "decorators": [],
+      "signature": "def __init__(...)",
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "src/player/motions/motion_base.py::MotionBase.handle_state",
+      "full_name": "MotionBase.handle_state",
+      "name": "handle_state",
+      "type": "method",
+      "parent": "MotionBase",
+      "file": "src/player/motions/motion_base.py",
+      "start_line": 6,
+      "end_line": 8,
+      "range": [
+        6,
+        8
+      ],
+      "decorators": [],
+      "signature": "def handle_state(...)",
+      "calls": [],
+      "used_by": [
+        "src/player/player_main.py::Player.update_animation_state"
+      ]
+    }
+  ]
+}

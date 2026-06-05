@@ -1,0 +1,134 @@
+{
+  "files": {
+    "src/main.py": {
+      "hash": "c6b52e6cd2e48a730732a011fb2cf5e14c0cf6ff7dee35fb055c02621e90e322",
+      "mtime": 1780632829,
+      "skeleton": "def main(...):\n    ..."
+    },
+    "src/settings.py": {
+      "hash": "6c50b63fb7db172f51a783b8fafdbebb9c377a6b9a3e4b3ef59fe54935e1c028",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/enemy/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/enemy/dummy/dummy_main.py": {
+      "hash": "1072cdfc79b2bc6efa7d7b55f48f7a1ebbb56955b69c4f0350e4fe1bceae98d6",
+      "mtime": 1780632429,
+      "skeleton": "class DummyEnemy:\n    def __init__(...):\n        ...\n    def load_images(...):\n        ...\n    def check_player_attack(...):\n        ...\n    def update(...):\n        ...\n    def draw(...):\n        ..."
+    },
+    "src/enemy/dummy/variables.py": {
+      "hash": "829a81b5a5a3f75214fe82e18c0b98903d09700d91e18749d165aa96349781af",
+      "mtime": 1780632429,
+      "skeleton": "class DummyVariables:\n    def __init__(...):\n        ..."
+    },
+    "src/enemy/dummy/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/map_system/map_main.py": {
+      "hash": "c499fa66a3d2b5f27d5c042d7b99a400b68f74ee1401f4033b4b3dff89e8fa06",
+      "mtime": 1780632429,
+      "skeleton": "class GameMap:\n    def __init__(...):\n        ...\n    def load_map_from_json(...):\n        ...\n    def load_map_assets(...):\n        ...\n    def build_map(...):\n        ...\n    def update(...):\n        ...\n    def draw(...):\n        ..."
+    },
+    "src/map_system/map_settings.py": {
+      "hash": "45bfbe7758817599a851ad00f55f036d6a995db9f551584602a04f461e3b6db2",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/map_system/variables.py": {
+      "hash": "ea027d1e5ed912f9b3dc536ffe53f963c62dba2448ccdff8e140c826aaf051d2",
+      "mtime": 1780632429,
+      "skeleton": "class MapVariables:\n    def __init__(...):\n        ..."
+    },
+    "src/map_system/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/platform_system/platform_main.py": {
+      "hash": "38008b5a27b737f4a018b110fd88ff28e756d262464467f773e562b93a581c32",
+      "mtime": 1780632429,
+      "skeleton": "class Platform:\n    def __init__(...):\n        ...\n    def load_image(...):\n        ...\n    def update(...):\n        ...\n    def draw(...):\n        ..."
+    },
+    "src/platform_system/platform_settings.py": {
+      "hash": "076935d43d60a31af6196a170ddfecc31e149584ca2fcdacf9e4f59ce80c7808",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/platform_system/variables.py": {
+      "hash": "41a73a7b051bb2e6fcfc3a7d8ac128f110ad6fe8a077d2b707561cf6e45e3fb3",
+      "mtime": 1780632429,
+      "skeleton": "class PlatformVariables:\n    def __init__(...):\n        ..."
+    },
+    "src/platform_system/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/player/asset_loader.py": {
+      "hash": "92757ad13d9109ae0e3afa00721f73d9158ed2a7ae72213b9ebb4d94e321b65c",
+      "mtime": 1780632429,
+      "skeleton": "class PlayerAssetLoader:\n    def __init__(...):\n        ...\n    def load_all_assets(...):\n        ...\n    def _load_series(...):\n        ..."
+    },
+    "src/player/combat_processor.py": {
+      "hash": "dd62f5d8128b88c76bcac6d5a956afef26db9889d8f619a77733d30138e27159",
+      "mtime": 1780632429,
+      "skeleton": "class PlayerCombatProcessor:\n    def process(...):\n        ..."
+    },
+    "src/player/input_handler.py": {
+      "hash": "1c3c11415b7a57922ad4b5d16b44dbc8d4bb43e19ca22302ad4951d1a140d685",
+      "mtime": 1780632429,
+      "skeleton": "class PlayerInputHandler:\n    def __init__(...):\n        ...\n    def update(...):\n        ...\n    def trigger_attack(...):\n        ..."
+    },
+    "src/player/physics_processor.py": {
+      "hash": "638b7bf0460e28a437c2c6308fe16761c60f8d94362661f4ff0c6164be71d77d",
+      "mtime": 1780632429,
+      "skeleton": "class PlayerPhysicsProcessor:\n    def process(...):\n        ..."
+    },
+    "src/player/player_main.py": {
+      "hash": "cdf490198074ae09564510f54ac288761dca3112c97971a5b71f997138f91f45",
+      "mtime": 1780632429,
+      "skeleton": "class Player:\n    def __init__(...):\n        ...\n    def update_animation_state(...):\n        ...\n    def update(...):\n        ...\n    def draw(...):\n        ..."
+    },
+    "src/player/variables.py": {
+      "hash": "d3249b47bdf8b4fbcf759f9990ab86741ec5f8f2f075e701a14eddac34f085f1",
+      "mtime": 1780632429,
+      "skeleton": "class PlayerVariables:\n    def __init__(...):\n        ..."
+    },
+    "src/player/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/player/motions/air_motions.py": {
+      "hash": "2ee731ee06c7ea7c222ec25e284936f17ffb7d4962a4af236c781614b9c007a7",
+      "mtime": 1780632429,
+      "skeleton": "class AirMotions:\n    def handle_state(...):\n        ..."
+    },
+    "src/player/motions/attack_motions.py": {
+      "hash": "910e1a51920f58dd3c8f674a1308e85ebb5fa0aa0ac198b8b22740151ae71b25",
+      "mtime": 1780632429,
+      "skeleton": "class AttackMotions:\n    def handle_state(...):\n        ..."
+    },
+    "src/player/motions/ground_motions.py": {
+      "hash": "85a48777478ed153d736571ccad062de8fff37c6bae326ec60efa81ea3c552c6",
+      "mtime": 1780632429,
+      "skeleton": "class GroundMotions:\n    def handle_state(...):\n        ..."
+    },
+    "src/player/motions/motion_base.py": {
+      "hash": "ddd4dd49b423f6bedf36367569da0d5620cf113830c5753e0c33dff41fb46b5c",
+      "mtime": 1780632429,
+      "skeleton": "class MotionBase:\n    def __init__(...):\n        ...\n    def handle_state(...):\n        ..."
+    },
+    "src/player/motions/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780632429,
+      "skeleton": ""
+    }
+  }
+}
