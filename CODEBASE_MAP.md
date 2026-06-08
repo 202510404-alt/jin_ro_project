@@ -1,12 +1,16 @@
 # 🏗️ 짭커서 프로젝트 CODEBASE MAP
 
-현재 인덱싱된 총 파일 수: **26개**
+현재 인덱싱된 총 파일 수: **30개**
 
 ## 🗂️ [Module Index]
 - `src/enemy/__init__.py`
-- `src/enemy/dummy/__init__.py`
-- `src/enemy/dummy/dummy_main.py`
-- `src/enemy/dummy/variables.py`
+- `src/enemy/enemy_base/__init__.py`
+- `src/enemy/enemy_base/base_enemy.py`
+- `src/enemy/enemy_base/base_vars.py`
+- `src/enemy/enemys/__init__.py`
+- `src/enemy/enemys/dummy/__init__.py`
+- `src/enemy/enemys/dummy/dummy_main.py`
+- `src/enemy/enemys/dummy/variables.py`
 - `src/main.py`
 - `src/map_system/__init__.py`
 - `src/map_system/map_main.py`
@@ -36,12 +40,32 @@
 
 --------------------------------------------------
 
-### 📄 src/enemy/dummy/__init__.py
+### 📄 src/enemy/enemy_base/__init__.py
 *선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
 
 --------------------------------------------------
 
-### 📄 src/enemy/dummy/dummy_main.py
+### 📄 src/enemy/enemy_base/base_enemy.py
+*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
+
+--------------------------------------------------
+
+### 📄 src/enemy/enemy_base/base_vars.py
+*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
+
+--------------------------------------------------
+
+### 📄 src/enemy/enemys/__init__.py
+*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
+
+--------------------------------------------------
+
+### 📄 src/enemy/enemys/dummy/__init__.py
+*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
+
+--------------------------------------------------
+
+### 📄 src/enemy/enemys/dummy/dummy_main.py
 #### 🔍 내부 심볼 및 의존성 관계:
 - **[CLASS]** `DummyEnemy` (Line: 7~80)
   - 🎯 *Used By (나를 부르는 곳)*: `src/main.py::main`
@@ -49,10 +73,10 @@
   - 🔗 *Calls (호출하는 것)*: `DummyVariables, load_images`
 - **[METHOD]** `DummyEnemy.load_images` (Line: 12~32)
   - 🔗 *Calls (호출하는 것)*: `abspath, convert_alpha, dirname, exit, join, load, print, quit, scale`
-  - 🎯 *Used By (나를 부르는 곳)*: `src/enemy/dummy/dummy_main.py::DummyEnemy.__init__`
+  - 🎯 *Used By (나를 부르는 곳)*: `src/enemy/enemys/dummy/dummy_main.py::DummyEnemy.__init__`
 - **[METHOD]** `DummyEnemy.check_player_attack` (Line: 34~49)
   - 🔗 *Calls (호출하는 것)*: `Rect, colliderect, print`
-  - 🎯 *Used By (나를 부르는 곳)*: `src/enemy/dummy/dummy_main.py::DummyEnemy.update`
+  - 🎯 *Used By (나를 부르는 곳)*: `src/enemy/enemys/dummy/dummy_main.py::DummyEnemy.update`
 - **[METHOD]** `DummyEnemy.update` (Line: 51~60)
   - 🔗 *Calls (호출하는 것)*: `check_player_attack`
   - 🎯 *Used By (나를 부르는 곳)*: `src/main.py::main, src/map_system/map_main.py::GameMap.update, src/player/player_main.py::Player.update`
@@ -77,10 +101,10 @@ class DummyEnemy:
 
 --------------------------------------------------
 
-### 📄 src/enemy/dummy/variables.py
+### 📄 src/enemy/enemys/dummy/variables.py
 #### 🔍 내부 심볼 및 의존성 관계:
 - **[CLASS]** `DummyVariables` (Line: 4~23)
-  - 🎯 *Used By (나를 부르는 곳)*: `src/enemy/dummy/dummy_main.py::DummyEnemy.__init__`
+  - 🎯 *Used By (나를 부르는 곳)*: `src/enemy/enemys/dummy/dummy_main.py::DummyEnemy.__init__`
 - **[METHOD]** `DummyVariables.__init__` (Line: 5~23)
 
 #### 🧱 Code Skeleton:

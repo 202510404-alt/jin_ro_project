@@ -8,10 +8,16 @@ project_root/
 ├── src/
 │   ├── enemy/
 │   │   ├── __init__.py [📂 src/enemy/__init__.py]
-│   │   ├── dummy/
-│   │   │   ├── __init__.py [📂 src/enemy/dummy/__init__.py]
-│   │   │   ├── dummy_main.py [📂 src/enemy/dummy/dummy_main.py] -> [💡 📦 imp: pygame, os, sys, enemy.dummy.variables.DummyVariables | 🧬 class DummyEnemy [L7-80] |   └─ def __init__(self, x, y) -> Any [L8-10] |   └─ def load_images(self) -> Any [L12-32] |   └─ def check_player_attack(self, player_obj) -> Any [L34-49] |   └─ def update(self, player_obj) -> Any [L51-60] |   └─ def draw(self, screen) -> Any [L62-80]]
-│   │   │   ├── variables.py [📂 src/enemy/dummy/variables.py] -> [💡 📦 imp: settings.GROUND_Y | 🧬 class DummyVariables [L4-23] |   └─ def __init__(self, x, y) -> Any [L5-23]]
+│   │   ├── enemy_base/
+│   │   │   ├── __init__.py [📂 src/enemy/enemy_base/__init__.py]
+│   │   │   ├── base_enemy.py [📂 src/enemy/enemy_base/base_enemy.py]
+│   │   │   ├── base_vars.py [📂 src/enemy/enemy_base/base_vars.py]
+│   │   ├── enemys/
+│   │   │   ├── __init__.py [📂 src/enemy/enemys/__init__.py]
+│   │   │   ├── dummy/
+│   │   │   │   ├── __init__.py [📂 src/enemy/enemys/dummy/__init__.py]
+│   │   │   │   ├── dummy_main.py [📂 src/enemy/enemys/dummy/dummy_main.py] -> [💡 📦 imp: pygame, os, sys, jin_ro_project.src.enemy.enemys.dummy.variables.DummyVariables | 🧬 class DummyEnemy [L7-80] |   └─ def __init__(self, x, y) -> Any [L8-10] |   └─ def load_images(self) -> Any [L12-32] |   └─ def check_player_attack(self, player_obj) -> Any [L34-49] |   └─ def update(self, player_obj) -> Any [L51-60] |   └─ def draw(self, screen) -> Any [L62-80]]
+│   │   │   │   ├── variables.py [📂 src/enemy/enemys/dummy/variables.py] -> [💡 📦 imp: settings.GROUND_Y | 🧬 class DummyVariables [L4-23] |   └─ def __init__(self, x, y) -> Any [L5-23]]
 │   ├── main.py [📂 src/main.py] -> [💡 📦 imp: pygame, sys, os, settings.SCREEN_WIDTH... / 💾 var: current_dir | 🎯 def main() -> Any [L19-78]]
 │   ├── map_system/
 │   │   ├── __init__.py [📂 src/map_system/__init__.py]

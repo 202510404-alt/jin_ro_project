@@ -14,7 +14,7 @@ if current_dir not in sys.path:
 from settings import SCREEN_WIDTH, SCREEN_HEIGHT, VIRTUAL_WIDTH, VIRTUAL_HEIGHT, FPS, GROUND_Y
 from player.player_main import Player
 from map_system.map_main import GameMap
-from enemy.dummy.dummy_main import DummyEnemy  # 🎯 새롭게 추가된 더미 몹
+from jin_ro_project.src.enemy.enemys.dummy.dummy_main import DummyEnemy  # 🎯 새롭게 추가된 더미 몹
 
 def main():
     pygame.init()

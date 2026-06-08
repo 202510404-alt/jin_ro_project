@@ -1,8 +1,8 @@
 {
   "files": {
     "src/main.py": {
-      "hash": "c6b52e6cd2e48a730732a011fb2cf5e14c0cf6ff7dee35fb055c02621e90e322",
-      "mtime": 1780634819,
+      "hash": "0fe3c6a2d7e671afbdfc774f713cef9cf914babc4581ead48f0a409a3a63b0de",
+      "mtime": 1780884377,
       "skeleton": "def main(...):\n    ..."
     },
     "src/settings.py": {
@@ -15,17 +15,37 @@
       "mtime": 1780632429,
       "skeleton": ""
     },
-    "src/enemy/dummy/dummy_main.py": {
-      "hash": "1072cdfc79b2bc6efa7d7b55f48f7a1ebbb56955b69c4f0350e4fe1bceae98d6",
+    "src/enemy/enemys/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/enemy/enemys/dummy/dummy_main.py": {
+      "hash": "2378a43075cb2111b689e047e6aa673331919ec8ae87b3cbfd88fcbcb4dc8ec4",
+      "mtime": 1780884377,
       "skeleton": "class DummyEnemy:\n    def __init__(...):\n        ...\n    def load_images(...):\n        ...\n    def check_player_attack(...):\n        ...\n    def update(...):\n        ...\n    def draw(...):\n        ..."
     },
-    "src/enemy/dummy/variables.py": {
+    "src/enemy/enemys/dummy/variables.py": {
       "hash": "829a81b5a5a3f75214fe82e18c0b98903d09700d91e18749d165aa96349781af",
       "mtime": 1780632429,
       "skeleton": "class DummyVariables:\n    def __init__(...):\n        ..."
     },
-    "src/enemy/dummy/__init__.py": {
+    "src/enemy/enemys/dummy/__init__.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780632429,
+      "skeleton": ""
+    },
+    "src/enemy/enemy_base/base_enemy.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780884496,
+      "skeleton": ""
+    },
+    "src/enemy/enemy_base/base_vars.py": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": 1780884305,
+      "skeleton": ""
+    },
+    "src/enemy/enemy_base/__init__.py": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "mtime": 1780632429,
       "skeleton": ""

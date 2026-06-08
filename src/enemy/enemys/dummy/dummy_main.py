@@ -2,7 +2,7 @@
 import pygame
 import os
 import sys
-from enemy.dummy.variables import DummyVariables
+from jin_ro_project.src.enemy.enemys.dummy.variables import DummyVariables
 
 class DummyEnemy:
     def __init__(self, x, y):
