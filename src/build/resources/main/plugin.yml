@@ -1,4 +1,10 @@
-name: realdesertcore
+name: desertcore
 version: '1.0-SNAPSHOT'
-main: com.desertcore.realdesertcore.Realdesertcore
+
+main: com.desertcore.DesertCore
 api-version: '1.21'
+load: POSTWORLD
+commands:
+  로비:
+    description: "오퍼레이터 전용 로비 복귀 명령어"
+    permission: "desertcore.op"

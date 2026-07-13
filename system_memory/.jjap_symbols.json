@@ -1,228 +1,6 @@
 {
   "symbols": [
     {
-      "symbol_id": "start.py::get_best_python",
-      "name": "get_best_python",
-      "full_name": "get_best_python",
-      "type": "function",
-      "path": "start.py",
-      "start_line": 34,
-      "end_line": 50,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "start.py::auto_install_dependencies",
-      "name": "auto_install_dependencies",
-      "full_name": "auto_install_dependencies",
-      "type": "function",
-      "path": "start.py",
-      "start_line": 59,
-      "end_line": 80,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "start.py::main",
-      "name": "main",
-      "full_name": "main",
-      "type": "function",
-      "path": "start.py",
-      "start_line": 82,
-      "end_line": 202,
-      "calls": [
-        "auto_install_dependencies"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::terminal.integrated.sendKeybindingsToShell",
-      "name": "terminal.integrated.sendKeybindingsToShell",
-      "full_name": "json.terminal.integrated.sendKeybindingsToShell",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::accessibility.verbosity.terminal",
-      "name": "accessibility.verbosity.terminal",
-      "full_name": "json.accessibility.verbosity.terminal",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::git.autofetch",
-      "name": "git.autofetch",
-      "full_name": "json.git.autofetch",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::explorer.confirmDelete",
-      "name": "explorer.confirmDelete",
-      "full_name": "json.explorer.confirmDelete",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::git.openRepositoryInParentFolders",
-      "name": "git.openRepositoryInParentFolders",
-      "full_name": "json.git.openRepositoryInParentFolders",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::terminal.integrated.enableMultiLinePasteWarning",
-      "name": "terminal.integrated.enableMultiLinePasteWarning",
-      "full_name": "json.terminal.integrated.enableMultiLinePasteWarning",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::workbench.editor.empty.hint",
-      "name": "workbench.editor.empty.hint",
-      "full_name": "json.workbench.editor.empty.hint",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::maven.terminal.useJavaHome",
-      "name": "maven.terminal.useJavaHome",
-      "full_name": "json.maven.terminal.useJavaHome",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::git.confirmSync",
-      "name": "git.confirmSync",
-      "full_name": "json.git.confirmSync",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::explorer.confirmDragAndDrop",
-      "name": "explorer.confirmDragAndDrop",
-      "full_name": "json.explorer.confirmDragAndDrop",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::java.configuration.runtimes",
-      "name": "java.configuration.runtimes",
-      "full_name": "json.java.configuration.runtimes",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::java.jdt.ls.java.home",
-      "name": "java.jdt.ls.java.home",
-      "full_name": "json.java.jdt.ls.java.home",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::roo-cline.debug",
-      "name": "roo-cline.debug",
-      "full_name": "json.roo-cline.debug",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::roo-cline.allowedCommands",
-      "name": "roo-cline.allowedCommands",
-      "full_name": "json.roo-cline.allowedCommands",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::roo-cline.deniedCommands",
-      "name": "roo-cline.deniedCommands",
-      "full_name": "json.roo-cline.deniedCommands",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::files.exclude",
-      "name": "files.exclude",
-      "full_name": "json.files.exclude",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": ".vscode/settings.json::python.createEnvironment.trigger",
-      "name": "python.createEnvironment.trigger",
-      "full_name": "json.python.createEnvironment.trigger",
-      "type": "json_key",
-      "path": ".vscode/settings.json",
-      "start_line": 1,
-      "end_line": 1,
-      "calls": [],
-      "used_by": []
-    },
-    {
       "symbol_id": "src/src/main/java/com/desertcore/deathevent.java::deathevent",
       "name": "deathevent",
       "full_name": "deathevent",
@@ -242,19 +20,19 @@
       "start_line": 38,
       "end_line": 51,
       "calls": [
-        "getEntity",
-        "getDrops",
-        "clear",
-        "getScheduler",
-        "startsWith",
-        "runTaskLater",
-        "respawn",
-        "getPluginManager",
-        "getWorld",
-        "getName",
         "getPlugin",
+        "startsWith",
+        "getPluginManager",
+        "respawn",
+        "getName",
+        "getDrops",
+        "getWorld",
+        "getEntity",
+        "clear",
+        "runTaskLater",
+        "setKeepInventory",
         "spigot",
-        "setKeepInventory"
+        "getScheduler"
       ],
       "used_by": []
     },
@@ -267,23 +45,23 @@
       "start_line": 54,
       "end_line": 73,
       "calls": [
-        "getLocation",
-        "getScheduler",
-        "color",
-        "startsWith",
-        "runTaskLater",
-        "getUniqueId",
-        "getPluginManager",
-        "getWorld",
-        "getName",
-        "getPlugin",
-        "setGameMode",
         "getPlayer",
-        "cancelTimer",
-        "sendMessage",
+        "getPlugin",
+        "startsWith",
+        "getLocation",
+        "getPluginManager",
         "text",
+        "getUniqueId",
+        "getName",
         "remove",
-        "setRespawnLocation"
+        "runTaskLater",
+        "getWorld",
+        "sendMessage",
+        "cancelTimer",
+        "color",
+        "setRespawnLocation",
+        "setGameMode",
+        "getScheduler"
       ],
       "used_by": []
     },
@@ -296,11 +74,11 @@
       "start_line": 66,
       "end_line": 76,
       "calls": [
-        "color",
-        "getUniqueId",
-        "sendMessage",
         "text",
-        "onPlayerMove"
+        "getUniqueId",
+        "onPlayerMove",
+        "sendMessage",
+        "color"
       ],
       "used_by": []
     },
@@ -313,31 +91,31 @@
       "start_line": 76,
       "end_line": 123,
       "calls": [
+        "decorate",
+        "containsKey",
+        "isSneaking",
+        "getPluginManager",
+        "sendMessage",
+        "cancelTimer",
+        "color",
+        "append",
         "getGameMode",
         "BukkitRunnable",
-        "runTaskTimer",
-        "color",
-        "containsKey",
-        "getUniqueId",
-        "add",
-        "getPlugin",
-        "run",
-        "contains",
-        "clickEvent",
-        "isSneaking",
-        "getWorld",
-        "sendMessage",
         "getPlayer",
-        "append",
-        "isOnline",
+        "getPlugin",
+        "runTaskTimer",
+        "clickEvent",
         "put",
-        "decorate",
+        "getWorld",
+        "add",
+        "isOnline",
+        "runCommand",
+        "run",
         "startsWith",
-        "getPluginManager",
-        "getName",
         "text",
-        "cancelTimer",
-        "runCommand"
+        "getUniqueId",
+        "getName",
+        "contains"
       ],
       "used_by": []
     },
@@ -350,18 +128,18 @@
       "start_line": 91,
       "end_line": 114,
       "calls": [
-        "getGameMode",
         "decorate",
-        "append",
-        "isOnline",
-        "color",
+        "text",
         "clickEvent",
         "sendMessage",
-        "isSneaking",
-        "text",
-        "add",
         "cancelTimer",
-        "runCommand"
+        "isSneaking",
+        "color",
+        "runCommand",
+        "append",
+        "add",
+        "isOnline",
+        "getGameMode"
       ],
       "used_by": []
     },
@@ -399,14 +177,14 @@
       "end_line": 119,
       "calls": [
         "decorate",
-        "append",
-        "runTaskTimer",
-        "color",
-        "clickEvent",
-        "sendMessage",
-        "add",
         "text",
+        "runTaskTimer",
+        "clickEvent",
         "put",
+        "sendMessage",
+        "color",
+        "append",
+        "add",
         "runCommand"
       ],
       "used_by": []
@@ -420,10 +198,10 @@
       "start_line": 125,
       "end_line": 130,
       "calls": [
+        "get",
         "remove",
-        "cancel",
         "containsKey",
-        "get"
+        "cancel"
       ],
       "used_by": []
     },
@@ -436,16 +214,16 @@
       "start_line": 133,
       "end_line": 148,
       "calls": [
-        "teleport",
+        "getPlayer",
         "startsWith",
         "getUniqueId",
-        "setGameMode",
-        "getWorld",
         "getName",
+        "getWorld",
         "cancelTimer",
-        "getPlayer",
+        "unloadAndDeleteInstance",
         "Location",
-        "unloadAndDeleteInstance"
+        "setGameMode",
+        "teleport"
       ],
       "used_by": []
     },
@@ -458,12 +236,12 @@
       "start_line": 139,
       "end_line": 146,
       "calls": [
-        "teleport",
         "startsWith",
         "getUniqueId",
-        "setGameMode",
+        "unloadAndDeleteInstance",
         "Location",
-        "unloadAndDeleteInstance"
+        "setGameMode",
+        "teleport"
       ],
       "used_by": []
     },
@@ -489,23 +267,23 @@
       "start_line": 151,
       "end_line": 178,
       "calls": [
-        "setCancelled",
-        "teleport",
-        "getMessage",
-        "color",
-        "startsWith",
-        "equalsIgnoreCase",
-        "getUniqueId",
-        "setGameMode",
-        "getWorld",
-        "getName",
-        "sendMessage",
-        "cancelTimer",
         "getPlayer",
-        "Location",
+        "startsWith",
+        "getMessage",
         "text",
+        "getUniqueId",
+        "getName",
+        "remove",
+        "setCancelled",
+        "sendMessage",
+        "getWorld",
+        "cancelTimer",
+        "color",
         "unloadAndDeleteInstance",
-        "remove"
+        "Location",
+        "setGameMode",
+        "equalsIgnoreCase",
+        "teleport"
       ],
       "used_by": []
     },
@@ -518,15 +296,15 @@
       "start_line": 161,
       "end_line": 170,
       "calls": [
-        "teleport",
-        "color",
         "startsWith",
-        "getUniqueId",
-        "setGameMode",
-        "sendMessage",
         "text",
+        "getUniqueId",
+        "sendMessage",
+        "color",
+        "unloadAndDeleteInstance",
         "Location",
-        "unloadAndDeleteInstance"
+        "setGameMode",
+        "teleport"
       ],
       "used_by": []
     },
@@ -552,10 +330,10 @@
       "start_line": 175,
       "end_line": 181,
       "calls": [
-        "color",
+        "text",
         "getUniqueId",
         "sendMessage",
-        "text",
+        "color",
         "unloadAndDeleteInstance"
       ],
       "used_by": []
@@ -569,22 +347,22 @@
       "start_line": 181,
       "end_line": 205,
       "calls": [
-        "getPlayers",
-        "warning",
-        "getScheduler",
+        "getPlugin",
+        "getPluginManager",
+        "File",
+        "unloadWorld",
+        "getLogger",
+        "getWorldContainer",
         "toPath",
         "runTaskLater",
-        "unloadWorld",
-        "runTaskAsynchronously",
-        "getPluginManager",
         "getWorld",
-        "File",
-        "getPlugin",
-        "getWorldContainer",
-        "isEmpty",
         "exists",
         "deleteDirectoryNative",
-        "getLogger"
+        "getPlayers",
+        "isEmpty",
+        "warning",
+        "runTaskAsynchronously",
+        "getScheduler"
       ],
       "used_by": []
     },
@@ -610,10 +388,10 @@
       "start_line": 208,
       "end_line": 222,
       "calls": [
-        "visitFile",
-        "walkFileTree",
+        "delete",
         "postVisitDirectory",
-        "delete"
+        "visitFile",
+        "walkFileTree"
       ],
       "used_by": []
     },
@@ -652,17 +430,17 @@
       "start_line": 8,
       "end_line": 14,
       "calls": [
-        "info",
-        "getCommand",
-        "setExecutor",
-        "deathevent",
-        "samakportal",
         "getPluginManager",
-        "getServer",
+        "setExecutor",
         "marendumbul",
-        "registerEvents",
+        "samakportal",
+        "getLogger",
         "lobbycmd",
-        "getLogger"
+        "registerEvents",
+        "info",
+        "getServer",
+        "deathevent",
+        "getCommand"
       ],
       "used_by": []
     },
@@ -675,17 +453,17 @@
       "start_line": 9,
       "end_line": 17,
       "calls": [
-        "info",
-        "getCommand",
-        "setExecutor",
-        "deathevent",
-        "samakportal",
         "getPluginManager",
-        "marendumbul",
-        "registerEvents",
-        "lobbycmd",
+        "setExecutor",
         "onDisable",
-        "getLogger"
+        "marendumbul",
+        "samakportal",
+        "getLogger",
+        "lobbycmd",
+        "registerEvents",
+        "info",
+        "deathevent",
+        "getCommand"
       ],
       "used_by": []
     },
@@ -698,16 +476,16 @@
       "start_line": 10,
       "end_line": 17,
       "calls": [
-        "info",
-        "getCommand",
-        "setExecutor",
-        "deathevent",
-        "samakportal",
         "getPluginManager",
-        "getServer",
-        "registerEvents",
+        "setExecutor",
         "onDisable",
-        "lobbycmd"
+        "samakportal",
+        "lobbycmd",
+        "registerEvents",
+        "info",
+        "getServer",
+        "deathevent",
+        "getCommand"
       ],
       "used_by": []
     },
@@ -720,14 +498,14 @@
       "start_line": 11,
       "end_line": 17,
       "calls": [
-        "getCommand",
-        "setExecutor",
-        "deathevent",
-        "samakportal",
         "getPluginManager",
-        "registerEvents",
+        "setExecutor",
         "onDisable",
-        "lobbycmd"
+        "samakportal",
+        "lobbycmd",
+        "registerEvents",
+        "deathevent",
+        "getCommand"
       ],
       "used_by": []
     },
@@ -740,13 +518,13 @@
       "start_line": 12,
       "end_line": 17,
       "calls": [
-        "getCommand",
-        "setExecutor",
-        "deathevent",
         "getPluginManager",
-        "registerEvents",
+        "setExecutor",
         "onDisable",
-        "lobbycmd"
+        "lobbycmd",
+        "registerEvents",
+        "deathevent",
+        "getCommand"
       ],
       "used_by": []
     },
@@ -759,8 +537,8 @@
       "start_line": 13,
       "end_line": 17,
       "calls": [
-        "setExecutor",
         "onDisable",
+        "setExecutor",
         "lobbycmd"
       ],
       "used_by": []
@@ -796,14 +574,14 @@
       "start_line": 18,
       "end_line": 48,
       "calls": [
-        "teleport",
-        "color",
-        "isOp",
+        "text",
         "sendMessage",
         "getWorld",
-        "text",
+        "color",
+        "Location",
         "setGameMode",
-        "Location"
+        "isOp",
+        "teleport"
       ],
       "used_by": []
     },
@@ -827,21 +605,21 @@
       "start_line": 19,
       "end_line": 61,
       "calls": [
-        "info",
-        "setType",
-        "isOnline",
-        "getScheduler",
-        "getType",
-        "runTaskLater",
-        "getPluginManager",
-        "getWorld",
-        "max",
-        "getPlugin",
-        "getBlockAt",
         "getPlayer",
+        "getPlugin",
+        "setType",
+        "getPluginManager",
+        "getLogger",
+        "max",
+        "runTaskLater",
+        "getWorld",
         "abs",
         "nextDouble",
-        "getLogger"
+        "info",
+        "getBlockAt",
+        "getType",
+        "isOnline",
+        "getScheduler"
       ],
       "used_by": []
     },
@@ -865,40 +643,40 @@
       "start_line": 25,
       "end_line": 95,
       "calls": [
+        "setCancelled",
+        "log",
+        "exists",
+        "getRightClicked",
+        "teleport",
+        "getPluginManager",
+        "runTask",
+        "getLogger",
+        "getWorldContainer",
+        "sendMessage",
+        "createWorld",
         "WorldCreator",
         "color",
-        "File",
-        "getUniqueId",
-        "exists",
-        "getPlugin",
-        "Location",
-        "substring",
-        "setCancelled",
-        "teleport",
-        "contains",
-        "delete",
-        "createWorld",
-        "warning",
-        "toString",
-        "sendMessage",
-        "getWorld",
         "getPlayer",
-        "getScheduler",
-        "getRightClicked",
-        "deleteDirectoryNative",
-        "runTask",
-        "log",
-        "getLogger",
+        "getPlugin",
+        "File",
         "copyDirectoryNative",
+        "delete",
         "toPath",
-        "startsWith",
-        "runTaskAsynchronously",
-        "getWorldContainer",
-        "getPluginManager",
-        "getName",
-        "text",
+        "getWorld",
+        "Location",
         "setGameMode",
-        "getScoreboardTags"
+        "getScoreboardTags",
+        "warning",
+        "runTaskAsynchronously",
+        "getScheduler",
+        "startsWith",
+        "text",
+        "getUniqueId",
+        "toString",
+        "getName",
+        "contains",
+        "substring",
+        "deleteDirectoryNative"
       ],
       "used_by": []
     },
@@ -911,10 +689,10 @@
       "start_line": 61,
       "end_line": 69,
       "calls": [
-        "exists",
+        "File",
         "copyDirectoryNative",
         "toPath",
-        "File"
+        "exists"
       ],
       "used_by": []
     },
@@ -927,12 +705,12 @@
       "start_line": 65,
       "end_line": 74,
       "calls": [
-        "delete",
-        "warning",
-        "toPath",
         "File",
+        "delete",
+        "getLogger",
+        "toPath",
         "exists",
-        "getLogger"
+        "warning"
       ],
       "used_by": []
     },
@@ -945,13 +723,13 @@
       "start_line": 98,
       "end_line": 115,
       "calls": [
-        "preVisitDirectory",
-        "visitFile",
+        "copy",
         "walkFileTree",
+        "relativize",
         "resolve",
         "exists",
-        "relativize",
-        "copy",
+        "preVisitDirectory",
+        "visitFile",
         "createDirectories"
       ],
       "used_by": []
@@ -965,10 +743,10 @@
       "start_line": 101,
       "end_line": 107,
       "calls": [
-        "exists",
         "relativize",
         "resolve",
-        "createDirectories"
+        "createDirectories",
+        "exists"
       ],
       "used_by": []
     },
@@ -981,8 +759,8 @@
       "start_line": 110,
       "end_line": 113,
       "calls": [
-        "copy",
         "relativize",
+        "copy",
         "resolve"
       ],
       "used_by": []
@@ -996,10 +774,10 @@
       "start_line": 118,
       "end_line": 132,
       "calls": [
-        "visitFile",
-        "walkFileTree",
+        "delete",
         "postVisitDirectory",
-        "delete"
+        "visitFile",
+        "walkFileTree"
       ],
       "used_by": []
     },
@@ -1027,571 +805,6 @@
       "calls": [
         "delete"
       ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::SemanticNavigator",
-      "name": "SemanticNavigator",
-      "full_name": "SemanticNavigator",
-      "type": "class",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 11,
-      "end_line": 208,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::SemanticNavigator.__init__",
-      "name": "__init__",
-      "full_name": "SemanticNavigator.__init__",
-      "type": "method",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 12,
-      "end_line": 16,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::SemanticNavigator._load_database",
-      "name": "_load_database",
-      "full_name": "SemanticNavigator._load_database",
-      "type": "method",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 18,
-      "end_line": 25,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::SemanticNavigator.extract_multi_slices",
-      "name": "extract_multi_slices",
-      "full_name": "SemanticNavigator.extract_multi_slices",
-      "type": "method",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 30,
-      "end_line": 208,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::JjapCursorNavigatorGUI",
-      "name": "JjapCursorNavigatorGUI",
-      "full_name": "JjapCursorNavigatorGUI",
-      "type": "class",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 213,
-      "end_line": 339,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::JjapCursorNavigatorGUI.__init__",
-      "name": "__init__",
-      "full_name": "JjapCursorNavigatorGUI.__init__",
-      "type": "method",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 214,
-      "end_line": 263,
-      "calls": [
-        "SemanticNavigator"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::JjapCursorNavigatorGUI.execute_slicing_pipeline",
-      "name": "execute_slicing_pipeline",
-      "full_name": "JjapCursorNavigatorGUI.execute_slicing_pipeline",
-      "type": "method",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 265,
-      "end_line": 320,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/agent_navigator.py::JjapCursorNavigatorGUI.manual_export_file",
-      "name": "manual_export_file",
-      "full_name": "JjapCursorNavigatorGUI.manual_export_file",
-      "type": "method",
-      "path": "tools/universal_indexer/agent_navigator.py",
-      "start_line": 322,
-      "end_line": 339,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/context_builder.py::ContextBuilder",
-      "name": "ContextBuilder",
-      "full_name": "ContextBuilder",
-      "type": "class",
-      "path": "tools/universal_indexer/context_builder.py",
-      "start_line": 13,
-      "end_line": 107,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/context_builder.py::ContextBuilder.__init__",
-      "name": "__init__",
-      "full_name": "ContextBuilder.__init__",
-      "type": "method",
-      "path": "tools/universal_indexer/context_builder.py",
-      "start_line": 16,
-      "end_line": 18,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/context_builder.py::ContextBuilder.read_and_clean_file",
-      "name": "read_and_clean_file",
-      "full_name": "ContextBuilder.read_and_clean_file",
-      "type": "method",
-      "path": "tools/universal_indexer/context_builder.py",
-      "start_line": 20,
-      "end_line": 78,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/context_builder.py::ContextBuilder.assemble_ai_prompt",
-      "name": "assemble_ai_prompt",
-      "full_name": "ContextBuilder.assemble_ai_prompt",
-      "type": "method",
-      "path": "tools/universal_indexer/context_builder.py",
-      "start_line": 80,
-      "end_line": 107,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/create_ai_map.py::load_jjap_context",
-      "name": "load_jjap_context",
-      "full_name": "load_jjap_context",
-      "type": "function",
-      "path": "tools/universal_indexer/create_ai_map.py",
-      "start_line": 41,
-      "end_line": 60,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/create_ai_map.py::collect_target_files",
-      "name": "collect_target_files",
-      "full_name": "collect_target_files",
-      "type": "function",
-      "path": "tools/universal_indexer/create_ai_map.py",
-      "start_line": 63,
-      "end_line": 121,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/create_ai_map.py::load_registry",
-      "name": "load_registry",
-      "full_name": "load_registry",
-      "type": "function",
-      "path": "tools/universal_indexer/create_ai_map.py",
-      "start_line": 124,
-      "end_line": 161,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/create_ai_map.py::load_protocols",
-      "name": "load_protocols",
-      "full_name": "load_protocols",
-      "type": "function",
-      "path": "tools/universal_indexer/create_ai_map.py",
-      "start_line": 164,
-      "end_line": 186,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/create_ai_map.py::parse_protocols_and_registries",
-      "name": "parse_protocols_and_registries",
-      "full_name": "parse_protocols_and_registries",
-      "type": "function",
-      "path": "tools/universal_indexer/create_ai_map.py",
-      "start_line": 193,
-      "end_line": 246,
-      "calls": [
-        "load_protocols",
-        "load_registry"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/create_ai_map.py::main",
-      "name": "main",
-      "full_name": "main",
-      "type": "function",
-      "path": "tools/universal_indexer/create_ai_map.py",
-      "start_line": 249,
-      "end_line": 339,
-      "calls": [
-        "load_jjap_context",
-        "parse_protocols_and_registries",
-        "collect_target_files"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/create_ai_map.py::generate_ai_optimized_map",
-      "name": "generate_ai_optimized_map",
-      "full_name": "generate_ai_optimized_map",
-      "type": "function",
-      "path": "tools/universal_indexer/create_ai_map.py",
-      "start_line": 345,
-      "end_line": 347,
-      "calls": [
-        "main"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/indexer.py::log",
-      "name": "log",
-      "full_name": "log",
-      "type": "function",
-      "path": "tools/universal_indexer/indexer.py",
-      "start_line": 18,
-      "end_line": 20,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/indexer.py::AdvancedIndexerV2",
-      "name": "AdvancedIndexerV2",
-      "full_name": "AdvancedIndexerV2",
-      "type": "class",
-      "path": "tools/universal_indexer/indexer.py",
-      "start_line": 32,
-      "end_line": 198,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/indexer.py::AdvancedIndexerV2.__init__",
-      "name": "__init__",
-      "full_name": "AdvancedIndexerV2.__init__",
-      "type": "method",
-      "path": "tools/universal_indexer/indexer.py",
-      "start_line": 37,
-      "end_line": 47,
-      "calls": [
-        "log"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/indexer.py::AdvancedIndexerV2._auto_load_parsers",
-      "name": "_auto_load_parsers",
-      "full_name": "AdvancedIndexerV2._auto_load_parsers",
-      "type": "method",
-      "path": "tools/universal_indexer/indexer.py",
-      "start_line": 49,
-      "end_line": 80,
-      "calls": [
-        "log"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/indexer.py::AdvancedIndexerV2.scan_project",
-      "name": "scan_project",
-      "full_name": "AdvancedIndexerV2.scan_project",
-      "type": "method",
-      "path": "tools/universal_indexer/indexer.py",
-      "start_line": 82,
-      "end_line": 120,
-      "calls": [
-        "log"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/indexer.py::AdvancedIndexerV2.index_file",
-      "name": "index_file",
-      "full_name": "AdvancedIndexerV2.index_file",
-      "type": "method",
-      "path": "tools/universal_indexer/indexer.py",
-      "start_line": 122,
-      "end_line": 161,
-      "calls": [
-        "log"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/indexer.py::AdvancedIndexerV2.save_index_data",
-      "name": "save_index_data",
-      "full_name": "AdvancedIndexerV2.save_index_data",
-      "type": "method",
-      "path": "tools/universal_indexer/indexer.py",
-      "start_line": 163,
-      "end_line": 198,
-      "calls": [
-        "log"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_lookup.py::load_json",
-      "name": "load_json",
-      "full_name": "load_json",
-      "type": "function",
-      "path": "tools/universal_indexer/jjap_lookup.py",
-      "start_line": 17,
-      "end_line": 22,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_lookup.py::lookup_symbol",
-      "name": "lookup_symbol",
-      "full_name": "lookup_symbol",
-      "type": "function",
-      "path": "tools/universal_indexer/jjap_lookup.py",
-      "start_line": 24,
-      "end_line": 51,
-      "calls": [
-        "load_json"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_lookup.py::show_skeleton",
-      "name": "show_skeleton",
-      "full_name": "show_skeleton",
-      "type": "function",
-      "path": "tools/universal_indexer/jjap_lookup.py",
-      "start_line": 53,
-      "end_line": 69,
-      "calls": [
-        "load_json"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_retriever.py::JjapRetriever",
-      "name": "JjapRetriever",
-      "full_name": "JjapRetriever",
-      "type": "class",
-      "path": "tools/universal_indexer/jjap_retriever.py",
-      "start_line": 9,
-      "end_line": 129,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_retriever.py::JjapRetriever.__init__",
-      "name": "__init__",
-      "full_name": "JjapRetriever.__init__",
-      "type": "method",
-      "path": "tools/universal_indexer/jjap_retriever.py",
-      "start_line": 16,
-      "end_line": 21,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_retriever.py::JjapRetriever._load_symbols",
-      "name": "_load_symbols",
-      "full_name": "JjapRetriever._load_symbols",
-      "type": "method",
-      "path": "tools/universal_indexer/jjap_retriever.py",
-      "start_line": 23,
-      "end_line": 37,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_retriever.py::JjapRetriever.retrieve_symbol",
-      "name": "retrieve_symbol",
-      "full_name": "JjapRetriever.retrieve_symbol",
-      "type": "method",
-      "path": "tools/universal_indexer/jjap_retriever.py",
-      "start_line": 39,
-      "end_line": 98,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_retriever.py::JjapRetriever._find_best_match",
-      "name": "_find_best_match",
-      "full_name": "JjapRetriever._find_best_match",
-      "type": "method",
-      "path": "tools/universal_indexer/jjap_retriever.py",
-      "start_line": 100,
-      "end_line": 117,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_retriever.py::JjapRetriever._safe_truncate",
-      "name": "_safe_truncate",
-      "full_name": "JjapRetriever._safe_truncate",
-      "type": "method",
-      "path": "tools/universal_indexer/jjap_retriever.py",
-      "start_line": 119,
-      "end_line": 129,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_retriever.py::main",
-      "name": "main",
-      "full_name": "main",
-      "type": "function",
-      "path": "tools/universal_indexer/jjap_retriever.py",
-      "start_line": 132,
-      "end_line": 140,
-      "calls": [
-        "JjapRetriever"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_watcher.py::import_file_directly",
-      "name": "import_file_directly",
-      "full_name": "import_file_directly",
-      "type": "function",
-      "path": "tools/universal_indexer/jjap_watcher.py",
-      "start_line": 25,
-      "end_line": 33,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_watcher.py::run_pipeline",
-      "name": "run_pipeline",
-      "full_name": "run_pipeline",
-      "type": "function",
-      "path": "tools/universal_indexer/jjap_watcher.py",
-      "start_line": 35,
-      "end_line": 78,
-      "calls": [
-        "import_file_directly"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_watcher.py::CodeChangeHandler",
-      "name": "CodeChangeHandler",
-      "full_name": "CodeChangeHandler",
-      "type": "class",
-      "path": "tools/universal_indexer/jjap_watcher.py",
-      "start_line": 81,
-      "end_line": 104,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_watcher.py::CodeChangeHandler.__init__",
-      "name": "__init__",
-      "full_name": "CodeChangeHandler.__init__",
-      "type": "method",
-      "path": "tools/universal_indexer/jjap_watcher.py",
-      "start_line": 82,
-      "end_line": 84,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_watcher.py::CodeChangeHandler.dispatch",
-      "name": "dispatch",
-      "full_name": "CodeChangeHandler.dispatch",
-      "type": "method",
-      "path": "tools/universal_indexer/jjap_watcher.py",
-      "start_line": 86,
-      "end_line": 104,
-      "calls": [
-        "run_pipeline"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/jjap_watcher.py::main",
-      "name": "main",
-      "full_name": "main",
-      "type": "function",
-      "path": "tools/universal_indexer/jjap_watcher.py",
-      "start_line": 106,
-      "end_line": 132,
-      "calls": [
-        "run_pipeline",
-        "CodeChangeHandler"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/update_map.py::update_map",
-      "name": "update_map",
-      "full_name": "update_map",
-      "type": "function",
-      "path": "tools/universal_indexer/update_map.py",
-      "start_line": 4,
-      "end_line": 94,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/core_parsers/java_parser.py::log",
-      "name": "log",
-      "full_name": "log",
-      "type": "function",
-      "path": "tools/universal_indexer/core_parsers/java_parser.py",
-      "start_line": 8,
-      "end_line": 10,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/core_parsers/java_parser.py::_find_matching_curly_brace",
-      "name": "_find_matching_curly_brace",
-      "full_name": "_find_matching_curly_brace",
-      "type": "function",
-      "path": "tools/universal_indexer/core_parsers/java_parser.py",
-      "start_line": 12,
-      "end_line": 34,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/core_parsers/java_parser.py::extract_symbols",
-      "name": "extract_symbols",
-      "full_name": "extract_symbols",
-      "type": "function",
-      "path": "tools/universal_indexer/core_parsers/java_parser.py",
-      "start_line": 36,
-      "end_line": 193,
-      "calls": [
-        "log",
-        "_find_matching_curly_brace"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/core_parsers/json_parser.py::extract_symbols",
-      "name": "extract_symbols",
-      "full_name": "extract_symbols",
-      "type": "function",
-      "path": "tools/universal_indexer/core_parsers/json_parser.py",
-      "start_line": 5,
-      "end_line": 97,
-      "calls": [],
-      "used_by": []
-    },
-    {
-      "symbol_id": "tools/universal_indexer/core_parsers/py_parser.py::extract_symbols",
-      "name": "extract_symbols",
-      "full_name": "extract_symbols",
-      "type": "function",
-      "path": "tools/universal_indexer/core_parsers/py_parser.py",
-      "start_line": 5,
-      "end_line": 158,
-      "calls": [],
       "used_by": []
     }
   ]
