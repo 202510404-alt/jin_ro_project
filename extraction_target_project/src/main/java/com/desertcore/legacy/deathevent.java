@@ -32,12 +32,12 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashSet;
 import java.util.UUID;
 
-public class deathevent implements Listener {
+public class DeathEvent implements Listener {
 
     private final DesertCore plugin;
     private final HashSet<UUID> promptActive = new HashSet<>();
 
-    public deathevent(DesertCore plugin) {
+    public DeathEvent(DesertCore plugin) {
         this.plugin = plugin;
     }
 

@@ -2,7 +2,6 @@ package com.desertcore.legacy;
 
 import com.desertcore.DesertCore;
 import com.desertcore.Switch;
-import com.desertcore.session.GameSession;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
@@ -26,6 +25,7 @@ public class DesertPortal implements Listener {
 
     private final DesertCore plugin;
 
+    // 대소문자 및 파일명 불일치 결함 정밀 수술 완료
     public DesertPortal(DesertCore plugin) {
         this.plugin = plugin;
     }
@@ -46,9 +46,6 @@ public class DesertPortal implements Listener {
 
             if (plugin.getGameSessionManager().getSessionByPlayer(player) != null || player.getWorld().getName().startsWith("desert_")) {
                 player.sendMessage(Component.text("[!] 이미 전장 월드에 진입했거나 세션이 할당된 상태입니다.").color(NamedTextColor.RED));
-                if (Switch.DEBUG_MODE) {
-                    plugin.getLogger().warning("[DEBUG] " + player.getName() + " 진입 거부: 이미 세션 존재함 또는 전장 월드에 있음.");
-                }
                 return;
             }
 
@@ -61,52 +58,35 @@ public class DesertPortal implements Listener {
             File templateDir = new File(serverDir, templateName);
             File instanceDir = new File(serverDir, instanceName);
 
-            if (Switch.DEBUG_MODE) {
-                plugin.getLogger().info("[DEBUG] 월드 경로 타겟팅 생성 - Template: " + templateDir.getAbsolutePath() + " | Instance: " + instanceDir.getAbsolutePath());
-            }
-
             if (!templateDir.exists()) {
                 player.sendMessage(Component.text("❌ 서버에 '" + templateName + "' 원본 폴더가 없습니다! 관리자에게 문의하세요.").color(NamedTextColor.RED));
                 return;
             }
 
-            if (Switch.DEBUG_MODE) {
-                plugin.getLogger().info("[DEBUG] 비동기 파일 복사 스케줄러 진입 시도.");
-            }
-
             Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
                 try {
                     if (instanceDir.exists()) {
-                        if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 잔재 인스턴스 폴더 발견, 삭제 프로세스 가동.");
                         deleteDirectoryNative(instanceDir.toPath());
                     }
 
-                    if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] NIO 월드 트리 복사 시작.");
                     copyDirectoryNative(templateDir.toPath(), instanceDir.toPath());
-                    if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] NIO 월드 트리 복사 완료.");
 
                     File uidFile = new File(instanceDir, "uid.dat");
                     if (uidFile.exists()) {
-                        boolean deleted = uidFile.delete();
-                        if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] uid.dat 제거 결과: " + deleted);
+                        uidFile.delete();
                     }
 
                     Bukkit.getScheduler().runTask(plugin, () -> {
-                        if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 동기식 메인 스레드 복귀, Bukkit World 인스턴스 로드 시작: " + instanceName);
                         World copiedWorld = Bukkit.createWorld(new WorldCreator(instanceName));
                         if (copiedWorld != null) {
-                            
-                            if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 월드 생성 성공. 세션 매니저에 등록 처리 중.");
                             plugin.getGameSessionManager().createSession(instanceName, player);
 
                             Location desertLocation = new Location(copiedWorld, 0.0, -43.0, 0.0, 180f, 0f);
                             player.teleport(desertLocation);
                             player.setGameMode(GameMode.SURVIVAL);
                             player.sendMessage(Component.text("[!] 전장(사막 맵)으로 이동했습니다!").color(NamedTextColor.YELLOW));
-                            if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 유저 전장 텔레포트 및 게임모드 전환 완수.");
                         } else {
                             player.sendMessage(Component.text("❌ 월드 로딩 중 오류가 발생했습니다.").color(NamedTextColor.RED));
-                            if (Switch.DEBUG_MODE) plugin.getLogger().severe("[DEBUG] Bukkit.createWorld 가 null을 반환했습니다.");
                         }
                     });
 

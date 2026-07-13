@@ -1,5 +1,6 @@
 package com.desertcore.legacy;
 
+import com.desertcore.DesertCore;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -10,10 +11,15 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import java.util.Random;
 
-public class marendumbul implements Listener {
+public class Marendumbul implements Listener {
 
+    private final DesertCore plugin;
     private final Random random = new Random();
     private final double BUSH_CHANCE = 0.005;
+
+    public Marendumbul(DesertCore plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
@@ -21,7 +27,7 @@ public class marendumbul implements Listener {
         World world = player.getWorld();
 
         // 💡 유저가 들어오고 3초(60틱) 뒤에 실행
-        Bukkit.getScheduler().runTaskLater(Bukkit.getPluginManager().getPlugin("desertcore"), () -> {
+        Bukkit.getScheduler().runTaskLater(this.plugin, () -> {
             if (!player.isOnline()) return;
 
             Bukkit.getLogger().info("[DesertCore] 3초 대기 완료! (0, -43, 0) 기준 이중 범위(정리 300, 재생성 100) 연산을 시작합니다.");
