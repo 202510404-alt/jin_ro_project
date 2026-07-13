@@ -1,4 +1,4 @@
-package com.desertcore;
+package com.desertcore.legacy; // ⭕ 올바른 패키지 경로 매핑
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -12,36 +12,33 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class lobbycmd implements CommandExecutor {
+public class LobbyCommand implements CommandExecutor { // ⭕ 표준 대문자 네이밍
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
-        // 1. 명령어를 친 대상이 플레이어인지 확인 (콘솔창 입력 방지)
         if (!(sender instanceof Player)) {
-            sender.sendMessage(Component.text("이 명령어는 인게임 플레이어만 사용할 수 있습니다.").color(NamedTextColor.RED));
+            sender.sendMessage(Component.text("This command can only be used by in-game players.").color(NamedTextColor.RED));
             return true;
         }
 
         Player player = (Player) sender;
 
-        // 2. [핵심] 오퍼레이터(OP) 권한이 있는지 체크
         if (!player.isOp()) {
-            player.sendMessage(Component.text("❌ 이 명령어를 사용할 권한이 없습니다. (OP 전용)").color(NamedTextColor.RED));
+            sender.sendMessage(Component.text("❌ You do not have permission to use this command. (OP Only)").color(NamedTextColor.RED));
             return true;
         }
 
-        // 3. 로비 월드("world") 정보 가져오기
         World lobbyWorld = Bukkit.getWorld("world");
         if (lobbyWorld != null) {
-            // 서바이벌 모드로 안전하게 변경 후 지정된 로비 좌표로 텔레포트
             player.setGameMode(GameMode.SURVIVAL);
+            // 시스템 좌표 보존
             Location lobbyLocation = new Location(lobbyWorld, 0.0, -44.0, 17.0, 180f, 0f);
             player.teleport(lobbyLocation);
 
-            player.sendMessage(Component.text("[!] 관리자 권한으로 로비에 강제 복귀했습니다.").color(NamedTextColor.GREEN));
+            player.sendMessage(Component.text("[!] Returned to the lobby via administrator authority.").color(NamedTextColor.GREEN));
         } else {
-            player.sendMessage(Component.text("❌ 'world' 월드를 찾을 수 없습니다. 월드 이름을 확인해 주세요.").color(NamedTextColor.RED));
+            player.sendMessage(Component.text("❌ 'world' cannot be found. Please check the world configuration.").color(NamedTextColor.RED));
         }
 
         return true;

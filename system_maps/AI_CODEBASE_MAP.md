@@ -7,47 +7,60 @@
 project_root/
 ├── .gitignore [📂 .gitignore]
 ├── .gradle/
-│   ├── 8.5/
+│   ├── 8.10.2/
 │   │   ├── checksums/
-│   │   │   ├── checksums.lock [📂 .gradle/8.5/checksums/checksums.lock]
+│   │   │   ├── checksums.lock [📂 .gradle/8.10.2/checksums/checksums.lock]
 │   │   ├── dependencies-accessors/
-│   │   │   ├── dependencies-accessors.lock [📂 .gradle/8.5/dependencies-accessors/dependencies-accessors.lock]
-│   │   │   ├── gc.properties [📂 .gradle/8.5/dependencies-accessors/gc.properties]
+│   │   │   ├── gc.properties [📂 .gradle/8.10.2/dependencies-accessors/gc.properties]
 │   │   ├── fileChanges/
-│   │   │   ├── last-build.bin [📂 .gradle/8.5/fileChanges/last-build.bin]
+│   │   │   ├── last-build.bin [📂 .gradle/8.10.2/fileChanges/last-build.bin]
 │   │   ├── fileHashes/
-│   │   │   ├── fileHashes.lock [📂 .gradle/8.5/fileHashes/fileHashes.lock]
-│   │   ├── gc.properties [📂 .gradle/8.5/gc.properties]
-│   ├── 9.3.0/
+│   │   │   ├── fileHashes.bin [📂 .gradle/8.10.2/fileHashes/fileHashes.bin]
+│   │   │   ├── fileHashes.lock [📂 .gradle/8.10.2/fileHashes/fileHashes.lock]
+│   │   ├── gc.properties [📂 .gradle/8.10.2/gc.properties]
+│   ├── 8.14.3/
 │   │   ├── checksums/
-│   │   │   ├── checksums.lock [📂 .gradle/9.3.0/checksums/checksums.lock]
-│   │   │   ├── md5-checksums.bin [📂 .gradle/9.3.0/checksums/md5-checksums.bin]
-│   │   │   ├── sha1-checksums.bin [📂 .gradle/9.3.0/checksums/sha1-checksums.bin]
+│   │   │   ├── checksums.lock [📂 .gradle/8.14.3/checksums/checksums.lock]
+│   │   │   ├── md5-checksums.bin [📂 .gradle/8.14.3/checksums/md5-checksums.bin]
+│   │   │   ├── sha1-checksums.bin [📂 .gradle/8.14.3/checksums/sha1-checksums.bin]
 │   │   ├── executionHistory/
-│   │   │   ├── executionHistory.bin [📂 .gradle/9.3.0/executionHistory/executionHistory.bin]
-│   │   │   ├── executionHistory.lock [📂 .gradle/9.3.0/executionHistory/executionHistory.lock]
+│   │   │   ├── executionHistory.bin [📂 .gradle/8.14.3/executionHistory/executionHistory.bin]
+│   │   │   ├── executionHistory.lock [📂 .gradle/8.14.3/executionHistory/executionHistory.lock]
 │   │   ├── fileChanges/
-│   │   │   ├── last-build.bin [📂 .gradle/9.3.0/fileChanges/last-build.bin]
+│   │   │   ├── last-build.bin [📂 .gradle/8.14.3/fileChanges/last-build.bin]
 │   │   ├── fileHashes/
-│   │   │   ├── fileHashes.bin [📂 .gradle/9.3.0/fileHashes/fileHashes.bin]
-│   │   │   ├── fileHashes.lock [📂 .gradle/9.3.0/fileHashes/fileHashes.lock]
-│   │   ├── gc.properties [📂 .gradle/9.3.0/gc.properties]
+│   │   │   ├── fileHashes.bin [📂 .gradle/8.14.3/fileHashes/fileHashes.bin]
+│   │   │   ├── fileHashes.lock [📂 .gradle/8.14.3/fileHashes/fileHashes.lock]
+│   │   │   ├── resourceHashesCache.bin [📂 .gradle/8.14.3/fileHashes/resourceHashesCache.bin]
+│   │   ├── gc.properties [📂 .gradle/8.14.3/gc.properties]
 │   ├── buildOutputCleanup/
 │   │   ├── buildOutputCleanup.lock [📂 .gradle/buildOutputCleanup/buildOutputCleanup.lock]
 │   │   ├── cache.properties [📂 .gradle/buildOutputCleanup/cache.properties]
+│   │   ├── outputFiles.bin [📂 .gradle/buildOutputCleanup/outputFiles.bin]
 │   ├── configuration-cache/
-│   │   ├── b1v9tig786iwcqfq7vhp6ewvx/
-│   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/b1v9tig786iwcqfq7vhp6ewvx/candidates.bin]
-│   │   ├── ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/
-│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/.globals.work.bin]
-│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/.strings.work.bin]
-│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/_.work.bin]
-│   │   │   ├── buildfingerprint.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/buildfingerprint.bin]
-│   │   │   ├── classloaderscopes.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/classloaderscopes.bin]
-│   │   │   ├── entry.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/entry.bin]
-│   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/projectfingerprint.bin]
-│   │   │   ├── work.bin [📂 .gradle/configuration-cache/ceaa47c2-fe2b-4f1e-b765-79131ca6ef12/work.bin]
+│   │   ├── 65030a47-5f7b-4767-979f-593221e0ddba/
+│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/.globals.work.bin]
+│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/.strings.work.bin]
+│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/_.work.bin]
+│   │   │   ├── build.work.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/build.work.bin]
+│   │   │   ├── buildfingerprint.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/buildfingerprint.bin]
+│   │   │   ├── entry.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/entry.bin]
+│   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/projectfingerprint.bin]
+│   │   │   ├── work.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/work.bin]
+│   │   ├── ckppi0xkjk8gfncf84kencwt9/
+│   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/ckppi0xkjk8gfncf84kencwt9/candidates.bin]
 │   │   ├── configuration-cache.lock [📂 .gradle/configuration-cache/configuration-cache.lock]
+│   │   ├── er267jy9l0ik159fzekldwdh0/
+│   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/er267jy9l0ik159fzekldwdh0/candidates.bin]
+│   │   ├── f8f35007-3dac-4b2b-86e4-da65fa6f74ce/
+│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/.globals.work.bin]
+│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/.strings.work.bin]
+│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/_.work.bin]
+│   │   │   ├── build.work.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/build.work.bin]
+│   │   │   ├── buildfingerprint.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/buildfingerprint.bin]
+│   │   │   ├── entry.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/entry.bin]
+│   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/projectfingerprint.bin]
+│   │   │   ├── work.bin [📂 .gradle/configuration-cache/f8f35007-3dac-4b2b-86e4-da65fa6f74ce/work.bin]
 │   │   ├── gc.properties [📂 .gradle/configuration-cache/gc.properties]
 │   ├── file-system.probe [📂 .gradle/file-system.probe]
 │   ├── vcs-1/
@@ -85,50 +98,9 @@ project_root/
 │   │   │   │   ├── Switch.class [📂 bin/main/com/desertcore/Switch.class]
 │   │   ├── plugin.yml [📂 bin/main/plugin.yml]
 ├── build/
-│   ├── classes/
-│   │   ├── java/
-│   │   │   ├── main/
-│   │   │   │   ├── com/
-│   │   │   │   │   ├── desertcore/
-│   │   │   │   │   │   ├── deathevent$1.class [📂 build/classes/java/main/com/desertcore/deathevent$1.class]
-│   │   │   │   │   │   ├── deathevent$2.class [📂 build/classes/java/main/com/desertcore/deathevent$2.class]
-│   │   │   │   │   │   ├── deathevent.class [📂 build/classes/java/main/com/desertcore/deathevent.class]
-│   │   │   │   │   │   ├── DesertCore.class [📂 build/classes/java/main/com/desertcore/DesertCore.class]
-│   │   │   │   │   │   ├── lobbycmd.class [📂 build/classes/java/main/com/desertcore/lobbycmd.class]
-│   │   │   │   │   │   ├── marendumbul.class [📂 build/classes/java/main/com/desertcore/marendumbul.class]
-│   │   │   │   │   │   ├── samakportal$1.class [📂 build/classes/java/main/com/desertcore/samakportal$1.class]
-│   │   │   │   │   │   ├── samakportal$2.class [📂 build/classes/java/main/com/desertcore/samakportal$2.class]
-│   │   │   │   │   │   ├── samakportal.class [📂 build/classes/java/main/com/desertcore/samakportal.class]
 │   ├── reports/
-│   │   ├── configuration-cache/
-│   │   │   ├── 4y709znrotf8jugh2z4hi6yue/
-│   │   │   │   ├── x0k0q07cpzquldnivxt1q1jv/
-│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/4y709znrotf8jugh2z4hi6yue/x0k0q07cpzquldnivxt1q1jv/configuration-cache-report.html]
-│   │   │   ├── 776cqg6727pn053kqtq5p5ce4/
-│   │   │   │   ├── cytukaxbb6g0h4doz1k866sy8/
-│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/776cqg6727pn053kqtq5p5ce4/cytukaxbb6g0h4doz1k866sy8/configuration-cache-report.html]
-│   │   │   ├── afhxpttqos8i0dfuazsshilma/
-│   │   │   │   ├── 22cofaq8odi9cdt8kkh6p4etj/
-│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/afhxpttqos8i0dfuazsshilma/22cofaq8odi9cdt8kkh6p4etj/configuration-cache-report.html]
-│   │   │   ├── b1v9tig786iwcqfq7vhp6ewvx/
-│   │   │   │   ├── f11a7b60x7i7lemuvsdisliw0/
-│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/b1v9tig786iwcqfq7vhp6ewvx/f11a7b60x7i7lemuvsdisliw0/configuration-cache-report.html]
-│   │   │   ├── f25fbzom4d1wet9f7w45oash3/
-│   │   │   │   ├── 9snj33wva79t3v9dlc40h87dt/
-│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/f25fbzom4d1wet9f7w45oash3/9snj33wva79t3v9dlc40h87dt/configuration-cache-report.html]
-│   │   │   ├── rcufm7m5joetcwnfp0ztcdza/
-│   │   │   │   ├── 11gtu45fpepa59wo4kw0l56mh/
-│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/rcufm7m5joetcwnfp0ztcdza/11gtu45fpepa59wo4kw0l56mh/configuration-cache-report.html]
 │   │   ├── problems/
 │   │   │   ├── problems-report.html [📂 build/reports/problems/problems-report.html]
-│   ├── resources/
-│   │   ├── main/
-│   │   │   ├── plugin.yml [📂 build/resources/main/plugin.yml]
-│   ├── tmp/
-│   │   ├── compileJava/
-│   │   │   ├── previous-compilation-data.bin [📂 build/tmp/compileJava/previous-compilation-data.bin]
-│   │   ├── jar/
-│   │   │   ├── MANIFEST.MF [📂 build/tmp/jar/MANIFEST.MF]
 ├── build.gradle.kts [📂 build.gradle.kts]
 ├── gradle/
 │   ├── 8.5/
@@ -241,10 +213,10 @@ project_root/
 │   │   │   │   │   ├── DesertCore.java [📂 src/main/java/com/desertcore/DesertCore.java] -> [💡 📦 imp: com.desertcore.session.GameSessionManager, java.io.File, java.net.URL, java.util.ArrayList, java.util.List, org.bukkit.event.Listener, org.bukkit.plugin.java.JavaPlugin | 🎯 def onEnable() [L16-26] | 🎯 def registerAllListenersInPackage("com.desertcore.legacy") [L21-25] | 🎯 def getLogger() [L24-29] | 🎯 def onDisable() [L29-31] | 🎯 def getLogger() [L30-33] | 🎯 def getGameSessionManager() [L33-35] | 🎯 def registerAllListenersInPackage(String) [L40-83] | 🎯 def getServer() [L69-73] | 🎯 def getLogger() [L72-74] | 🎯 def getLogger() [L75-80] | 🎯 def getLogger() [L81-81]]
 │   │   │   │   │   ├── DesertCoreTester.java [📂 src/main/java/com/desertcore/DesertCoreTester.java] -> [💡 📦 imp: java.io.File, java.lang.reflect.Constructor, java.net.URL, org.bukkit.event.Listener | 🧬 class DesertCoreTester [L12-90] | 🎯 def main(String[]) [L14-89]]
 │   │   │   │   │   ├── legacy/
-│   │   │   │   │   │   ├── deathevent.java [📂 src/main/java/com/desertcore/legacy/deathevent.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, com.desertcore.session.GameSession, java.io.File, java.io.IOException, java.nio.file.FileVisitResult, java.nio.file.Files, java.nio.file.Path, java.nio.file.SimpleFileVisitor, java.nio.file.attribute.BasicFileAttributes, java.util.HashSet, java.util.UUID, net.kyori.adventure.text.Component, net.kyori.adventure.text.event.ClickEvent, net.kyori.adventure.text.format.NamedTextColor, net.kyori.adventure.text.format.TextDecoration, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.entity.Player, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.entity.PlayerDeathEvent, org.bukkit.event.player.PlayerCommandPreprocessEvent, org.bukkit.event.player.PlayerJoinEvent, org.bukkit.event.player.PlayerMoveEvent, org.bukkit.event.player.PlayerRespawnEvent, org.bukkit.scheduler.BukkitRunnable, org.bukkit.scheduler.BukkitTask | 🧬 class deathevent [L35-223] | 🎯 def deathevent(DesertCore) [L40-42] | 🎯 def onPlayerDeath(PlayerDeathEvent) [L45-59] | 🎯 def onPlayerRespawn(PlayerRespawnEvent) [L62-84] | 🎯 def onPlayerMove(PlayerMoveEvent) [L87-149] | 🎯 def run() [L111-138] | 🎯 def onPlayerJoin(PlayerJoinEvent) [L152-173] | 🎯 def unloadAndDeleteInstance(previousWorldName) [L170-175] | 🎯 def unloadAndDeleteInstance(String) [L175-206] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L196-198] | 🎯 def deleteDirectoryNative(Path) [L208-222] | 🎯 def visitFile(Path, BasicFileAttributes) [L211-214] | 🎯 def postVisitDirectory(Path, IOException) [L217-220]]
+│   │   │   │   │   │   ├── DeathEvent.java [📂 src/main/java/com/desertcore/legacy/DeathEvent.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, com.desertcore.session.GameSession, java.io.File, java.io.IOException, java.nio.file.FileVisitResult, java.nio.file.Files, java.nio.file.Path, java.nio.file.SimpleFileVisitor, java.nio.file.attribute.BasicFileAttributes, java.util.HashSet, java.util.UUID, net.kyori.adventure.text.Component, net.kyori.adventure.text.event.ClickEvent, net.kyori.adventure.text.format.NamedTextColor, net.kyori.adventure.text.format.TextDecoration, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.entity.Player, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.entity.PlayerDeathEvent, org.bukkit.event.player.PlayerCommandPreprocessEvent, org.bukkit.event.player.PlayerJoinEvent, org.bukkit.event.player.PlayerMoveEvent, org.bukkit.event.player.PlayerRespawnEvent, org.bukkit.scheduler.BukkitRunnable, org.bukkit.scheduler.BukkitTask | 🧬 class deathevent [L35-223] | 🎯 def deathevent(DesertCore) [L40-42] | 🎯 def onPlayerDeath(PlayerDeathEvent) [L45-59] | 🎯 def onPlayerRespawn(PlayerRespawnEvent) [L62-84] | 🎯 def onPlayerMove(PlayerMoveEvent) [L87-149] | 🎯 def run() [L111-138] | 🎯 def onPlayerJoin(PlayerJoinEvent) [L152-173] | 🎯 def unloadAndDeleteInstance(previousWorldName) [L170-175] | 🎯 def unloadAndDeleteInstance(String) [L175-206] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L196-198] | 🎯 def deleteDirectoryNative(Path) [L208-222] | 🎯 def visitFile(Path, BasicFileAttributes) [L211-214] | 🎯 def postVisitDirectory(Path, IOException) [L217-220]]
+│   │   │   │   │   │   ├── DesertPortal.java [📂 src/main/java/com/desertcore/legacy/DesertPortal.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, com.desertcore.session.GameSession, java.io.File, java.io.IOException, java.nio.file.*, java.nio.file.attribute.BasicFileAttributes, java.util.logging.Level, net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.WorldCreator, org.bukkit.entity.Player, org.bukkit.entity.Villager, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.player.PlayerInteractEntityEvent | 🧬 class DesertPortal [L25-155] | 🎯 def samakportal(DesertCore) [L29-31] | 🎯 def onVillagerClick(PlayerInteractEntityEvent) [L34-119] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L81-89] | 🎯 def copyDirectoryNative(templateDir.toPath() [L85-92] | 🎯 def copyDirectoryNative(Path, Path) [L121-138] | 🎯 def preVisitDirectory(Path, BasicFileAttributes) [L124-130] | 🎯 def visitFile(Path, BasicFileAttributes) [L133-136] | 🎯 def deleteDirectoryNative(Path) [L140-154] | 🎯 def visitFile(Path, BasicFileAttributes) [L143-146] | 🎯 def postVisitDirectory(Path, IOException) [L149-152]]
+│   │   │   │   │   │   ├── LobbyCommand.java [📂 src/main/java/com/desertcore/legacy/LobbyCommand.java] -> [💡 📦 imp: net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.command.Command, org.bukkit.command.CommandExecutor, org.bukkit.command.CommandSender, org.bukkit.entity.Player, org.jetbrains.annotations.NotNull | 🧬 class LobbyCommand [L15-46] | 🎯 def onCommand(@NotNull, @NotNull, @NotNull, @NotNull) [L18-45]]
 │   │   │   │   │   │   ├── marendumbul.java [📂 src/main/java/com/desertcore/legacy/marendumbul.java] -> [💡 📦 imp: java.util.Random, org.bukkit.Bukkit, org.bukkit.Material, org.bukkit.World, org.bukkit.block.Block, org.bukkit.entity.Player, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.player.PlayerJoinEvent | 🧬 class marendumbul [L13-62] | 🎯 def onPlayerJoin(PlayerJoinEvent) [L19-61]]
-│   │   │   │   │   │   ├── samakportal.java [📂 src/main/java/com/desertcore/legacy/samakportal.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, com.desertcore.session.GameSession, java.io.File, java.io.IOException, java.nio.file.*, java.nio.file.attribute.BasicFileAttributes, java.util.logging.Level, net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.WorldCreator, org.bukkit.entity.Player, org.bukkit.entity.Villager, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.player.PlayerInteractEntityEvent | 🧬 class samakportal [L25-155] | 🎯 def samakportal(DesertCore) [L29-31] | 🎯 def onVillagerClick(PlayerInteractEntityEvent) [L34-119] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L81-89] | 🎯 def copyDirectoryNative(templateDir.toPath() [L85-92] | 🎯 def copyDirectoryNative(Path, Path) [L121-138] | 🎯 def preVisitDirectory(Path, BasicFileAttributes) [L124-130] | 🎯 def visitFile(Path, BasicFileAttributes) [L133-136] | 🎯 def deleteDirectoryNative(Path) [L140-154] | 🎯 def visitFile(Path, BasicFileAttributes) [L143-146] | 🎯 def postVisitDirectory(Path, IOException) [L149-152]]
-│   │   │   │   │   ├── lobbycmd.java [📂 src/main/java/com/desertcore/lobbycmd.java] -> [💡 📦 imp: net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.command.Command, org.bukkit.command.CommandExecutor, org.bukkit.command.CommandSender, org.bukkit.entity.Player, org.jetbrains.annotations.NotNull | 🧬 class lobbycmd [L15-49] | 🎯 def onCommand(@NotNull, @NotNull, @NotNull, @NotNull) [L18-48]]
 │   │   │   │   │   ├── session/
 │   │   │   │   │   │   ├── GameSession.java [📂 src/main/java/com/desertcore/session/GameSession.java] -> [💡 📦 imp: java.util.ArrayList, java.util.Collections, java.util.List, java.util.UUID, org.bukkit.Bukkit, org.bukkit.World, org.bukkit.scheduler.BukkitTask | 🧬 class GameSession [L11-71] | 🎯 def GameSession(String, UUID) [L21-26] | 🎯 def getSessionId() [L29-29] | 🎯 def getWorldName() [L30-30] | 🎯 def getPlayers() [L33-33] | 🎯 def getCurrentWave() [L35-35] | 🎯 def incrementWave() [L36-36] | 🎯 def isTerminating() [L38-38] | 🎯 def setTerminating(boolean) [L39-39] | 🎯 def setActiveTimer(BukkitTask) [L46-49] | 🎯 def clearActiveTimer() [L47-54] | 🎯 def clearActiveTimer() [L54-63] | 🎯 def getBukkitWorld() [L68-70]]
 │   │   │   │   │   │   ├── GameSessionManager.java [📂 src/main/java/com/desertcore/session/GameSessionManager.java] -> [💡 📦 imp: java.util.HashMap, java.util.Map, java.util.UUID, org.bukkit.entity.Player, org.bukkit.plugin.java.JavaPlugin | 🧬 class GameSessionManager [L9-63] | 🎯 def GameSessionManager(JavaPlugin) [L16-18] | 🎯 def createSession(String, Player) [L23-31] | 🎯 def getSessionByPlayer(Player) [L36-38] | 🎯 def getSessionByWorld(String) [L43-45] | 🎯 def terminateSession(String) [L50-62]]

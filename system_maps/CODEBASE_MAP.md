@@ -7,10 +7,10 @@
 - `extraction_target_project/src/main/java/com/desertcore/DesertCore.java`
 - `extraction_target_project/src/main/java/com/desertcore/DesertCoreTester.java`
 - `extraction_target_project/src/main/java/com/desertcore/Switch.java`
-- `extraction_target_project/src/main/java/com/desertcore/legacy/deathevent.java`
+- `extraction_target_project/src/main/java/com/desertcore/legacy/DeathEvent.java`
+- `extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java`
+- `extraction_target_project/src/main/java/com/desertcore/legacy/LobbyCommand.java`
 - `extraction_target_project/src/main/java/com/desertcore/legacy/marendumbul.java`
-- `extraction_target_project/src/main/java/com/desertcore/legacy/samakportal.java`
-- `extraction_target_project/src/main/java/com/desertcore/lobbycmd.java`
 - `extraction_target_project/src/main/java/com/desertcore/session/GameSession.java`
 - `extraction_target_project/src/main/java/com/desertcore/session/GameSessionManager.java`
 
@@ -60,7 +60,7 @@ private Switch() {} // 인스턴스화 방지 // L10-10
 
 --------------------------------------------------
 
-### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/deathevent.java
+### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/DeathEvent.java
 #### 🧱 Code Skeleton:
 ```python
 class deathevent { // L35-223
@@ -80,19 +80,10 @@ class deathevent { // L35-223
 
 --------------------------------------------------
 
-### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/marendumbul.java
+### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java
 #### 🧱 Code Skeleton:
 ```python
-class marendumbul { // L13-62
-    public void onPlayerJoin(PlayerJoinEvent event) { // L19-61
-```
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/samakportal.java
-#### 🧱 Code Skeleton:
-```python
-class samakportal { // L25-155
+class DesertPortal { // L25-155
     public samakportal(DesertCore plugin) { // L29-31
     public void onVillagerClick(PlayerInteractEntityEvent event) { // L34-119
     deleteDirectoryNative(instanceDir.toPath()); // L81-89
@@ -107,11 +98,20 @@ class samakportal { // L25-155
 
 --------------------------------------------------
 
-### 📄 extraction_target_project/src/main/java/com/desertcore/lobbycmd.java
+### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/LobbyCommand.java
 #### 🧱 Code Skeleton:
 ```python
-class lobbycmd { // L15-49
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) { // L18-48
+class LobbyCommand { // L15-46
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) { // L18-45
+```
+
+--------------------------------------------------
+
+### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/marendumbul.java
+#### 🧱 Code Skeleton:
+```python
+class marendumbul { // L13-62
+    public void onPlayerJoin(PlayerJoinEvent event) { // L19-61
 ```
 
 --------------------------------------------------

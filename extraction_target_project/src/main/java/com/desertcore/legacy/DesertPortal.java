@@ -22,11 +22,11 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.logging.Level;
 
-public class samakportal implements Listener {
+public class DesertPortal implements Listener {
 
     private final DesertCore plugin;
 
-    public samakportal(DesertCore plugin) {
+    public DesertPortal(DesertCore plugin) {
         this.plugin = plugin;
     }
 

@@ -5,6 +5,6 @@ main: com.desertcore.DesertCore
 api-version: '1.21'
 load: POSTWORLD
 commands:
-  로비:
-    description: "오퍼레이터 전용 로비 복귀 명령어"
+  lobby:
+    description: "Operator-only lobby return command"
     permission: "desertcore.op"
