@@ -2,127 +2,73 @@
 # 🎯 AI GLOBAL GUIDELINES: 코드 무결성 및 디버깅 중심 가이드
 # [SCAN_MODE] SRC
 # ==========================================================================
-# 📄 [요청 1] TARGET: src/main/java/com/desertcore/deathevent.java (140-223라인)
+# 📄 [요청 1] TARGET: src/main/java/com/desertcore/DesertCore.java (35-65라인)
 # ----------------------------------------------------------
 ```python
-            player.setGameMode(GameMode.SURVIVAL);
-            Location lobbyLocation = new Location(lobbyWorld, 0.0, -43.0, 0.0, 0f, 0f);
-            player.teleport(lobbyLocation);
-
-            if (previousWorldName.startsWith("desert_")) {
-                unloadAndDeleteInstance(previousWorldName);
-            }
-        }
     }
 
-    @EventHandler
-    public void onPlayerCommand(PlayerCommandPreprocessEvent event) {
-        Player player = event.getPlayer();
-        String message = event.getMessage();
-        String currentWorldName = player.getWorld().getName();
+    /**
+     * 지정한 패키지(폴더) 내부의 모든 클래스를 찾아 마인크래프트 이벤트 리스너로 자동 등록하는 브레인 메소드
+     */
+    private void registerAllListenersInPackage(String packageName) {
+        try {
+            String path = packageName.replace('.', '/');
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            URL resource = classLoader.getResource(path);
+            
+            if (resource == null) return;
 
-        if (message.equalsIgnoreCase("/lobby_confirm")) {
-            event.setCancelled(true);
-            World lobbyWorld = Bukkit.getWorld("world");
-            if (lobbyWorld != null) {
-                promptActive.remove(player.getUniqueId());
-                cancelTimer(player.getUniqueId());
-                player.setGameMode(GameMode.SURVIVAL);
+            File directory = new File(resource.getFile().getAbsoluteFile().toString().replace("%20", " "));
+            if (!directory.exists()) return;
 
-                Location lobbyLocation = new Location(lobbyWorld, 0.0, -43.0, 0.0, 0f, 0f);
-                player.teleport(lobbyLocation);
-                player.sendMessage(Component.text("[!] 안전하게 로비로 복귀했습니다.").color(NamedTextColor.GREEN));
+            // 폴더 내부의 모든 파일명을 가져옴
+            File[] files = directory.listFiles();
+            if (files == null) return;
 
-                if (currentWorldName.startsWith("desert_")) {
-                    unloadAndDeleteInstance(currentWorldName);
-                }
-            }
-        } else if (message.equalsIgnoreCase("/lobby_cancel")) {
-            event.setCancelled(true);
-            promptActive.remove(player.getUniqueId());
-            cancelTimer(player.getUniqueId());
-            player.sendMessage(Component.text("[!] 전장을 계속 관전합니다. (다시 나가려면 Shift를 3초간 유지)").color(NamedTextColor.GRAY));
-        }
-    }
+            for (File file : files) {
+                // .class 파일만 검열
+                if (file.getName().endsWith(".class")) {
+                    String className = packageName + '.' + file.getName().substring(0, file.getName().length() - 6);
+                    Class<?> clazz = Class.forName(className);
 
-    // ★ [오류 해결] FileUtils 대신 자바 순정 내장 API로 월드 사본 폴더 제거
-    private void unloadAndDeleteInstance(String instanceName) {
-        var plugin = Bukkit.getPluginManager().getPlugin("desertcore");
-        if (plugin == null) return;
-
-        Bukkit.getScheduler().runTaskLater(plugin, () -> {
-            World instanceWorld = Bukkit.getWorld(instanceName);
-            if (instanceWorld != null) {
-                if (instanceWorld.getPlayers().isEmpty()) {
-                    Bukkit.unloadWorld(instanceWorld, false);
-
-                    // 비동기로 폴더 트리 삭제 수행
-                    Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
-                        File instanceDir = new File(Bukkit.getWorldContainer(), instanceName);
-                        if (instanceDir.exists()) {
-                            try {
-                                deleteDirectoryNative(instanceDir.toPath());
-                            } catch (IOException e) {
-                                plugin.getLogger().warning(instanceName + " 사본 월드 폴더 삭제 중 예외 발생");
-                            }
-                        }
-                    });
-                }
-            }
-        }, 20L);
-    }
-
-    // 자바 내장 폴더 삭제용 헬퍼 메소드
-    private void deleteDirectoryNative(Path path) throws IOException {
-        Files.walkFileTree(path, new SimpleFileVisitor<>() {
-            @Override
-            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-                Files.delete(file);
-                return FileVisitResult.CONTINUE;
-            }
-
-            @Override
-            public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-                Files.delete(dir);
-                return FileVisitResult.CONTINUE;
-            }
-        });
-    }
-}
+                    // 해당 클래스가 마인크래프트 Listener 인터페이스를 구현했는지 확인
+                    if (Listener.class.isAssignableFrom(clazz) && !clazz.isInterface()) {
+                        try {
+                            // 생성자에 DesertCore 플러그인을 주입하며 동적으로 인스턴스 생성
+                            Listener listener = (Listener) clazz.getConstructor(DesertCore.class).newInstance(this);
 ```
 
-# 📄 [요청 2] TARGET: src/main/java/com/desertcore/lobbycmd.java (18-48라인)
+# 📄 [요청 2] TARGET: src/main/java/com/desertcore/DesertCoreTester.java (25-55라인)
 # ----------------------------------------------------------
 ```python
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        System.out.println("[STEP 2] 'com.desertcore.legacy' 패키지 자동 탐색 시작");
+        String targetPackage = "com.desertcore.legacy";
+        
+        try {
+            String path = targetPackage.replace('.', '/');
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            URL resource = classLoader.getResource(path);
 
-        // 1. 명령어를 친 대상이 플레이어인지 확인 (콘솔창 입력 방지)
-        if (!(sender instanceof Player)) {
-            sender.sendMessage(Component.text("이 명령어는 인게임 플레이어만 사용할 수 있습니다.").color(NamedTextColor.RED));
-            return true;
-        }
+            if (resource == null) {
+                System.err.println("❌ 에러: 지정된 패키지 경로를 찾을 수 없습니다: " + path);
+                return;
+            }
 
-        Player player = (Player) sender;
+            File directory = new File(resource.getFile().getAbsoluteFile().toString().replace("%20", " "));
+            if (!directory.exists()) {
+                System.err.println("❌ 에러: 디렉토리가 존재하지 않습니다: " + directory.getPath());
+                return;
+            }
 
-        // 2. [핵심] 오퍼레이터(OP) 권한이 있는지 체크
-        if (!player.isOp()) {
-            player.sendMessage(Component.text("❌ 이 명령어를 사용할 권한이 없습니다. (OP 전용)").color(NamedTextColor.RED));
-            return true;
-        }
+            File[] files = directory.listFiles();
+            if (files == null || files.length == 0) {
+                System.out.println("⚠ 스캔 결과: 폴더 내에 자바 클래스 파일이 존재하지 않습니다.");
+                return;
+            }
 
-        // 3. 로비 월드("world") 정보 가져오기
-        World lobbyWorld = Bukkit.getWorld("world");
-        if (lobbyWorld != null) {
-            // 서바이벌 모드로 안전하게 변경 후 지정된 로비 좌표로 텔레포트
-            player.setGameMode(GameMode.SURVIVAL);
-            Location lobbyLocation = new Location(lobbyWorld, 0.0, -44.0, 17.0, 180f, 0f);
-            player.teleport(lobbyLocation);
-
-            player.sendMessage(Component.text("[!] 관리자 권한으로 로비에 강제 복귀했습니다.").color(NamedTextColor.GREEN));
-        } else {
-            player.sendMessage(Component.text("❌ 'world' 월드를 찾을 수 없습니다. 월드 이름을 확인해 주세요.").color(NamedTextColor.RED));
-        }
-
-        return true;
-    }
+            int loadCount = 0;
+            for (File file : files) {
+                if (file.getName().endsWith(".class")) {
+                    String className = targetPackage + '.' + file.getName().substring(0, file.getName().length() - 6);
+                    Class<?> clazz = Class.forName(className);
 ```

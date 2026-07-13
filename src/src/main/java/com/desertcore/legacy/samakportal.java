@@ -1,5 +1,8 @@
 package com.desertcore.legacy;
 
+import com.desertcore.DesertCore;
+import com.desertcore.Switch;
+import com.desertcore.session.GameSession;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
@@ -21,6 +24,12 @@ import java.util.logging.Level;
 
 public class samakportal implements Listener {
 
+    private final DesertCore plugin;
+
+    public samakportal(DesertCore plugin) {
+        this.plugin = plugin;
+    }
+
     @EventHandler
     public void onVillagerClick(PlayerInteractEntityEvent event) {
         if (!(event.getRightClicked() instanceof Villager villager)) {
@@ -31,8 +40,15 @@ public class samakportal implements Listener {
             event.setCancelled(true);
             Player player = event.getPlayer();
 
-            if (player.getWorld().getName().startsWith("desert_")) {
-                player.sendMessage(Component.text("[!] 이미 전장 월드에 진입한 상태입니다.").color(NamedTextColor.RED));
+            if (Switch.DEBUG_MODE) {
+                plugin.getLogger().info("[DEBUG] " + player.getName() + "이(가) desert_npc 상호작용 감지됨.");
+            }
+
+            if (plugin.getGameSessionManager().getSessionByPlayer(player) != null || player.getWorld().getName().startsWith("desert_")) {
+                player.sendMessage(Component.text("[!] 이미 전장 월드에 진입했거나 세션이 할당된 상태입니다.").color(NamedTextColor.RED));
+                if (Switch.DEBUG_MODE) {
+                    plugin.getLogger().warning("[DEBUG] " + player.getName() + " 진입 거부: 이미 세션 존재함 또는 전장 월드에 있음.");
+                }
                 return;
             }
 
@@ -45,56 +61,63 @@ public class samakportal implements Listener {
             File templateDir = new File(serverDir, templateName);
             File instanceDir = new File(serverDir, instanceName);
 
+            if (Switch.DEBUG_MODE) {
+                plugin.getLogger().info("[DEBUG] 월드 경로 타겟팅 생성 - Template: " + templateDir.getAbsolutePath() + " | Instance: " + instanceDir.getAbsolutePath());
+            }
+
             if (!templateDir.exists()) {
                 player.sendMessage(Component.text("❌ 서버에 '" + templateName + "' 원본 폴더가 없습니다! 관리자에게 문의하세요.").color(NamedTextColor.RED));
                 return;
             }
 
-            var plugin = Bukkit.getPluginManager().getPlugin("desertcore");
-            if (plugin == null) return;
+            if (Switch.DEBUG_MODE) {
+                plugin.getLogger().info("[DEBUG] 비동기 파일 복사 스케줄러 진입 시도.");
+            }
 
-            // 비동기로 자바 순정 기능을 활용해 폴더 복사 및 청소 진행
             Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
                 try {
-                    // 1. 기존 잔재 폴더가 있다면 자바 순정 방식으로 트리 삭제
                     if (instanceDir.exists()) {
+                        if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 잔재 인스턴스 폴더 발견, 삭제 프로세스 가동.");
                         deleteDirectoryNative(instanceDir.toPath());
                     }
 
-                    // 2. 템플릿 폴더 복사 (자바 NIO 사용)
+                    if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] NIO 월드 트리 복사 시작.");
                     copyDirectoryNative(templateDir.toPath(), instanceDir.toPath());
+                    if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] NIO 월드 트리 복사 완료.");
 
-                    // 3. uid.dat 파일 제거 및 결과 확인(경고 제거)
                     File uidFile = new File(instanceDir, "uid.dat");
                     if (uidFile.exists()) {
                         boolean deleted = uidFile.delete();
-                        if (!deleted) {
-                            plugin.getLogger().warning("uid.dat 파일을 삭제하지 못했습니다.");
-                        }
+                        if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] uid.dat 제거 결과: " + deleted);
                     }
 
-                    // 4. 메인 스레드 복귀 후 월드 로드 및 이동
                     Bukkit.getScheduler().runTask(plugin, () -> {
+                        if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 동기식 메인 스레드 복귀, Bukkit World 인스턴스 로드 시작: " + instanceName);
                         World copiedWorld = Bukkit.createWorld(new WorldCreator(instanceName));
                         if (copiedWorld != null) {
+                            
+                            if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 월드 생성 성공. 세션 매니저에 등록 처리 중.");
+                            plugin.getGameSessionManager().createSession(instanceName, player);
+
                             Location desertLocation = new Location(copiedWorld, 0.0, -43.0, 0.0, 180f, 0f);
                             player.teleport(desertLocation);
                             player.setGameMode(GameMode.SURVIVAL);
                             player.sendMessage(Component.text("[!] 전장(사막 맵)으로 이동했습니다!").color(NamedTextColor.YELLOW));
+                            if (Switch.DEBUG_MODE) plugin.getLogger().info("[DEBUG] 유저 전장 텔레포트 및 게임모드 전환 완수.");
                         } else {
                             player.sendMessage(Component.text("❌ 월드 로딩 중 오류가 발생했습니다.").color(NamedTextColor.RED));
+                            if (Switch.DEBUG_MODE) plugin.getLogger().severe("[DEBUG] Bukkit.createWorld 가 null을 반환했습니다.");
                         }
                     });
 
                 } catch (IOException e) {
                     player.sendMessage(Component.text("❌ 전장 맵 데이터 복사 중 오류가 발생했습니다.").color(NamedTextColor.RED));
-                    plugin.getLogger().log(Level.SEVERE, "전장 복사 중 예외 발생: ", e); // 더 강력한 로깅 경고 해결
+                    plugin.getLogger().log(Level.SEVERE, "전장 복사 중 예외 발생: ", e);
                 }
             });
         }
     }
 
-    // 자바 순정 폴더 복사 편의 메소드
     private void copyDirectoryNative(Path source, Path target) throws IOException {
         Files.walkFileTree(source, new SimpleFileVisitor<>() {
             @Override
@@ -114,7 +137,6 @@ public class samakportal implements Listener {
         });
     }
 
-    // 자바 순정 폴더 삭제 편의 메소드
     private void deleteDirectoryNative(Path path) throws IOException {
         Files.walkFileTree(path, new SimpleFileVisitor<>() {
             @Override
